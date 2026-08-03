@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AI Automation Daily, 3 August 2026: Agents Get a Desktop, a Browser Login and a Cheaper Engine</title></head>
+<body>
+<h1>AI Automation Daily &mdash; 3 August 2026</h1>
+<p>Today's releases share one theme: the agent stopped being a chat window and started being a worker with its own tools, its own screen and, more uncomfortably, its own set of your passwords. Five items worth your attention, each with the practical angle on time or money.</p>
+
+<h2>Google Gemini Spark</h2>
+<p>Google's personal agent opened to most of the world on 29&ndash;31 July, and it now borrows the accounts and saved passwords already in your Chrome profile to run web errands.</p>
+<p>Why it matters: Inbox triage, newsletter summaries and bulk unsubscribes are the classic "I know I should automate this" chores that never get set up, and Spark closes that gap without any scripting. The trade is real though &mdash; it works from a personal Google Account only, it is unavailable in the EEA, UK, Switzerland and Nigeria, and Google states in writing that a scheduled task running while you are offline may finish before you can stop it. Payments are handed back to you by design. Treat it as an assistant for low-stakes volume work, not for anything touching client data or money.</p>
+
+<h2>GitHub Copilot Workspace, now generally available</h2>
+<p>Out of beta at Build 2026 with Autopilot mode, which reasons over a whole repository and iterates on multi-file edits and tests, plus Fleet mode for running that across several open issues at once.</p>
+<p>Why it matters: Fleet is aimed squarely at the work nobody wants to bill for &mdash; dependency upgrades, style migrations, licence-compliance sweeps. A new desktop app acts as a control plane, showing every active agent on one dashboard instead of forcing you to switch IDE panes. Both modes run in local or GitHub Actions sandboxes, and the human review gate before anything reaches main stays mandatory. GitHub's own framing is that the engineer's main job in 2027 is reviewing agent output rather than typing it.</p>
+
+<h2>Project Polaris inside Copilot</h2>
+<p>Microsoft swapped the model powering Copilot to its own Polaris system, with Pro and Pro+ tiers gaining multi-file context up to 100,000 lines and autonomous test generation as defaults.</p>
+<p>Why it matters: No price change, no new SKU &mdash; the swap happens underneath existing contracts. That makes it a margin decision dressed as a product launch: every completion routed through a rented API was a per-token toll on Microsoft's own product. For buyers the useful lesson is that your capability can now change without your invoice changing, so re-benchmark the tools you already pay for rather than assuming last quarter's evaluation still holds. Note that no SWE-Bench figures were disclosed.</p>
+
+<h2>Alibaba's Wanyou Wujie (&#19975;&#26377;&#26080;&#30028;)</h2>
+<p>An enterprise platform in internal testing that assembles a squad of digital workers to push a whole project forward together, rather than handling one-off office tasks.</p>
+<p>Why it matters: It sits alongside Qwen Work, which handles documents and daily workflow, while Wanyou Wujie targets multi-agent delivery on complex projects. Every capability is free during the test period, with paid tiers planned later based on task scale and model consumption. Early testers report that solo operators and freelancers fit the lightweight end of it surprisingly well &mdash; which is the window to experiment, before the pricing page appears.</p>
+
+<h2>Inkling-Small</h2>
+<p>A compact open model at roughly a quarter of the parameters of its larger sibling, reported to deliver comparable performance.</p>
+<p>Why it matters: Most production automation is not frontier work. It is classification, extraction, summarising and routing &mdash; jobs a small model handles at a fraction of the serving cost, and one you can self-host without per-token metering. Every credible small open release widens the set of tasks you can move off a paid API entirely.</p>
+
+<h2>Automation tip of the day</h2>
+<p>Scope agent permissions by verb, not by account. When you connect an agent to email, calendar or a repository, grant read and draft rights and stop there &mdash; no send, no purchase, no merge, no stored payment method. The productivity gain of agentic tools comes almost entirely from the reading, sorting and drafting, which is the safe 90 percent of the job. The final action takes you seconds to approve and is where every expensive mistake lives. Set this up on day one; retrofitting limits after an agent has already been running loose in an account is far harder.</p>
+
+<h2>Worth a look</h2>
+<p>Notice what today's two biggest agent stories have in common. Copilot Workspace commits to production branches, and independent reviewers flag prompt injection through repository context as the primary unresolved attack vector. Spark browses with your live Chrome sessions, and Google's answer is that it is "building in" prompt-injection protection. Same unsolved problem, two directions of attack: hostile text hidden in a repo, or hostile text hidden in a web page. Both vendors ship the capability now and the defence as a work in progress. That is not a reason to sit out &mdash; it is a reason to pick where you deploy. Agents on your own content are a different risk class from agents on content strangers can edit.</p>
+
+<p>See you tomorrow.</p>
+</body>
+</html>
