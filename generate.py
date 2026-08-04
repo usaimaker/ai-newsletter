@@ -1,7 +1,7 @@
 import os, glob, re, html
 
 ISSUES = "issues"
-SITE = "https://ai-newsletter.vercel.app"
+SITE = "https://ainexusdaily.vercel.app/newsletter"
 ADSENSE_CLIENT = "ca-pub-9959815194191047"
 
 ADSENSE = (
