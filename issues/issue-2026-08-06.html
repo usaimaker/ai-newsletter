@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Automation Daily: Agent Marketplaces, Token-Lean Coding Agents and the Arriving Agent Bill &mdash; August 6, 2026</title>
+</head>
+<body>
+<h1>AI Automation Daily &mdash; August 6, 2026</h1>
+<p>Today the theme is plumbing rather than fireworks. Somebody is building a storefront for agents, somebody else is starting to charge for the ones you already run, a coding agent is winning by taking fewer turns, and the security crowd is pointing out that a chain of perfectly legal actions can still end badly. Five picks, each with a practical angle on time or money.</p>
+
+<h2>Kakao AI Agent Marketplace</h2>
+<p>Kakao and Kakao Enterprise were selected to build South Korea&#39;s national AI Agent Marketplace, a roughly 11 billion won programme running to December 2027, with a first phase targeted to open this year.</p>
+<p>Why it matters: the interesting part is not the money, it is the shape. Registration, verification, discovery, combination, execution and settlement all sit on one platform, it is deliberately not tied to a single cloud or model, and tools interconnect over APIs or MCP. Every listed tool passes security review, sandbox testing and hallucination checks before publication, with continuous re-verification afterwards. If agent marketplaces become a normal procurement channel, the winners will be the small vendors whose agent is packaged, versioned and verifiable &mdash; not the ones with the cleverest demo.</p>
+
+<h2>Alibaba Cloud Container Service Agent goes paid</h2>
+<p>Alibaba Cloud announced its Container Service Agent will add a skills centre and IM channels, and will start commercial billing at 10:00 Beijing time on 3 September &mdash; conversation, autonomous ops and scheduled tasks all become metered.</p>
+<p>Why it matters: this is the first widely visible case of an infrastructure agent moving from free perk to line item. Scheduled tasks are the part to watch: a cron-driven agent that quietly polls all day is cheap when it is free and surprising when it is not. Before September, go through your scheduled agent jobs and ask which ones actually need to run hourly rather than daily, and which could be a plain script with an agent only on exception. Free tiers are a product stage, not a permanent condition.</p>
+
+<h2>Tura</h2>
+<p>A local, open-source coding agent written in Rust (AGPL-3.0) that replaces the usual tool-calling loop with a single macro command that executes a whole inspect-patch-build-test-lint tree in one model round.</p>
+<p>Why it matters: the published benchmark, holding the model fixed across 60 sessions each on 20 DeepSWE tasks, reports Tura Balanced at 80.0% verifier success versus 60.0% for the official Codex CLI High configuration, using 49.6% fewer tokens and 66.8% fewer model rounds; a cost-first mode trades some of that win rate for 83.5% fewer tokens. Treat vendor benchmarks with the usual scepticism &mdash; the project itself calls these system-level associations, not causal claims. But the mechanism is sound and portable: every tool call you collapse into a batch is a model round you do not pay for.</p>
+
+<h2>OpenCode</h2>
+<p>An MIT-licensed terminal coding agent from the SST team, now past 192,000 GitHub stars, deliberately model-agnostic &mdash; it runs on the Google Gemini free tier, the Groq free API, or a fully local Ollama model, and also supports 75+ paid providers with your own key.</p>
+<p>Why it matters: this is the cheapest credible way to put an agent on real work without a subscription. Because nothing routes through a vendor middle layer, it is also the easier option to justify when the code is a client&#39;s rather than your own. Version 1.18.11, shipped 1 August, fixed an MCP SSE reconnect loop that could spin after a server error &mdash; worth updating if you run MCP tools, since that class of bug burns quota silently.</p>
+
+<h2>Rubrik Agent Identity</h2>
+<p>Launched at Black Hat USA this week, it governs agent access action by action rather than by account, and uses a small model called SAGE to review each operation at machine speed instead of queuing approvals for a human.</p>
+<p>Why it matters: the example Rubrik leads with is an agent that reads customer records from a CRM and pastes them into an outbound email. Both steps are authorised; the combination is the incident. Their second point is more mundane and hits sooner &mdash; running agents internally generated trillions of tokens of telemetry, so observability itself became a cost centre needing its own filtering layer. If you are instrumenting agents this quarter, sample and summarise from day one rather than storing everything and sorting it out later.</p>
+
+<h2>Automation tip of the day</h2>
+<p>Count model rounds, not just tokens. Most agent runs are expensive because the agent takes twenty small turns where four batched ones would do &mdash; read a file, think, run a command, think, run the next command. Pick your most-run workflow and rewrite the instruction so the agent plans the whole sequence first and executes it as one batch, reporting back only at real decision points. Then log rounds per successful task for a week. If that number drops and the success rate holds, the saving is real and it compounds every single run. If the success rate falls, you batched across a step that genuinely needed to see the previous result &mdash; split just that one.</p>
+
+<h2>Worth a look</h2>
+<p>Two of today&#39;s stories rhyme. A national marketplace wants to verify agents before you install them; a security vendor argues you cannot trust an agent even after you have installed it, because authorisation is granted per account while harm happens per sequence. Both are describing the same gap from opposite ends. The practical takeaway for a small operation is unglamorous: when you adopt an agent from anywhere &mdash; marketplace, GitHub, a colleague&#39;s recommendation &mdash; write down the specific actions it is allowed to take and, more importantly, the pairs it must never chain, such as read-private-data followed by send-externally. That list is short, takes an afternoon, and is the only control that still works when the individual permissions are all perfectly valid.</p>
+</body>
+</html>
