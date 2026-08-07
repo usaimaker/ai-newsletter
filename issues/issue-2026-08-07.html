@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Daily AI Automation Brief &mdash; Cloudflare OS, Grok 4.6, Stateless MCP and the Tool-Token Bill (August 7, 2026)</title></head>
+<body>
+<h1>Daily AI Automation Brief &mdash; August 7, 2026</h1>
+<p>Today&#39;s releases share an unglamorous theme: the plumbing. A self-hosted agent workspace, a model that improves without growing, a spec change that makes remote agent servers boring to run, and a gateway that stops your agent from paying for tools it never calls. None of it is flashy. All of it shows up on the bill.</p>
+
+<h2>Cloudflare OS</h2>
+<p>Cloudflare released an open-source, browser-based agent workspace that runs inside your own Cloudflare account, where non-developers build and share internal micro-apps.</p>
+<p>Why it matters: the bring-your-own-model layer routes through AI Gateway, so you can meter token spend per person, per team and per app, set budgets and quotas, and send routine tasks to a cheap model while reserving a frontier model for real reasoning. Because it runs in your account, you keep the workflows and the data connections instead of renting them. Access-based zero trust checks every request. If you have ever wanted a rule like &quot;summaries go to the cheap model, contract review does not,&quot; this is the shape that rule takes in production.</p>
+
+<h2>Grok 4.6</h2>
+<p>xAI&#39;s 1.5-trillion-parameter model ships around today, keeping the previous architecture and taking all of its gains from post-training &mdash; supervised fine-tuning and reinforcement learning.</p>
+<p>Why it matters: post-training gains land exactly where agent workflows break &mdash; instruction-following, fewer refusals on legitimate tasks, and more reliable tool calls. That is worth more to an automation than a benchmark score. The wider signal is cadence: 4.5 arrived a month ago, 4.7 at 2.1T is a few weeks out. On a four-week release rhythm, picking a platform by version number is a losing game. Pick the channel &mdash; API stability, IDE integration, cloud availability &mdash; because new models flow into existing channels within days of launch.</p>
+
+<h2>MCP goes stateless</h2>
+<p>The Model Context Protocol&#39;s final revised spec landed in late July and removes the initialization handshake and sticky sessions; every request now carries its own full context.</p>
+<p>Why it matters: remote MCP servers can finally be operated like ordinary stateless HTTP services &mdash; plain round-robin, no session affinity, no shared session store, no MCP-aware gateway parsing JSON bodies just to route a call. That is a direct cut to hosting complexity and cost for anyone self-serving agent tools. The caveat is real: old and new protocol versions will coexist for a while, and mixed-version fleets are where the failure rate lives. Pin your client and server versions deliberately rather than letting them drift.</p>
+
+<h2>Conduit</h2>
+<p>An open-source local MCP gateway that exposes three meta-tools to your agent instead of dumping every connected server&#39;s full tool list into the context window.</p>
+<p>Why it matters: this attacks a cost most people never measure. Every tool definition is tokens you pay on every single request, before the agent does any work. Add a handful of MCP servers and the schemas alone can dominate your context. Consolidating behind one gateway reportedly cuts that overhead by roughly 90 percent with the same task outcomes, and it gives you one place to switch off destructive tools fleet-wide and read a real audit trail of every call. Credentials stay in the OS keychain rather than in client config files.</p>
+
+<h2>Snowflake Cortex Agents and MCP servers</h2>
+<p>Cortex Agents and Snowflake-managed MCP servers inside Native Apps reached general availability today, including agents in one app calling another app&#39;s agent or MCP server.</p>
+<p>Why it matters: the interesting part is the permission model, not the feature list. Each app keeps its data and logic private, and agents reach across apps only through tools the provider explicitly exposes and the consumer explicitly approves &mdash; enforced with caller grants and feature policies. Cross-app agent calls are where blast radius quietly expands, and shipping this with approval gates built in is the right default. Borrow the pattern even if you never touch Snowflake: an agent should reach another system through a named, approved tool, never through inherited credentials.</p>
+
+<h2>Automation tip of the day</h2>
+<p>Measure your tool-definition overhead before you optimize anything else. Run one trivial request through your agent &mdash; something that needs no tools at all &mdash; and record the input token count. That number is your fixed toll: schemas, descriptions and parameter definitions you pay for on every request whether or not a tool fires. Most people discover it is far larger than they assumed once three or four MCP servers are connected. Then do one pass: for each workflow, list the tools it actually calls, and load only those. A research task does not need database write tools in context. A reporting job does not need browser control. If trimming per-workflow is awkward, that is the case for a gateway. Re-run the same trivial request afterward and compare. The saving applies to every request you will ever make, which makes it the highest-leverage hour in your whole setup.</p>
+
+<h2>Worth a look</h2>
+<p>Two of today&#39;s items attack the same bill from opposite ends, and it is worth noticing that neither one is about the model. Stateless MCP removes the server-side machinery you were paying to keep running; the gateway pattern removes the context-side tax you were paying on every request. Both live in the plumbing between your agent and its tools &mdash; the layer nobody demos and everybody funds. Meanwhile the model tier keeps getting cheaper and turns over every four weeks, which means the share of your spend that is genuinely under your control is drifting away from &quot;which model&quot; and toward &quot;how is this wired.&quot; The practical read: if your agent costs are climbing, resist the urge to swap models first. Audit the wiring &mdash; how many tools are in context, how many round-trips a task takes, how much infrastructure sits between the request and the answer. That is where the money is, and unlike the model tier, it does not change under you every month.</p>
+</body>
+</html>
