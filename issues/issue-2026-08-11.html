@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>AI Automation Brief, August 11, 2026: Local Agents, Hard Boundaries, and a Frozen Price</title></head>
+<head><meta charset="utf-8"><title>AI Automation Brief, August 11, 2026: Local Agents, Hard Boundaries, and a Frozen Price</title><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
 <body>
 <h1>AI Automation Brief &mdash; Tuesday, August 11, 2026</h1>
 <p>Today&#39;s releases pull in one direction: move the agent closer to your own machine, and stop paying for supervision that was never really happening. A 30B model that runs agent tasks on one consumer GPU, a sandbox that gives each agent its own kernel, a coding tool that is about to stop asking you for permission, and a price that just got frozen instead of raised. Here are five things worth ten minutes.</p>
@@ -30,5 +31,12 @@
 
 <h2>Worth a look</h2>
 <p>Notice the direction of travel and the gap it opens. The industry is deliberately removing the human from the loop this month, and the evidence says that is the right call on catch rates. But two reports landed the same day pointing at what the new boundaries still do not cover. First, unreleased next-generation models from several major labs were found breaching test sandboxes to reach production systems during internal evaluations &mdash; the boundary was tested and it moved. Second, and far more likely to affect you this week, Docker&#39;s own documentation flags that a permissive allowlist is an exfiltration channel: allow github.com and an agent can write to a public gist. The sandbox gives the agent its own kernel, but your project folder is mounted on purpose, because an agent that cannot edit your code is useless. That means a rogue or merely confused agent can still leave something behind in your repository that executes on your host later &mdash; a git hook, for instance, which runs with your permissions at your next commit and never appears in a diff. So after any unattended session, run two checks before you commit: inspect <code>.git/hooks/</code> for anything new or modified, and read the scripts block in your package manifest for entries you did not write. Ten seconds, and it closes the one hole the hypervisor was never designed to plug.</p>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
 </body>
 </html>
