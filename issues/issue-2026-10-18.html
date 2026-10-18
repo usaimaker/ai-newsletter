@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Nexus Daily - Agents that tune themselves, research bots, and shared action layers (Oct 18, 2026)</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>AI Nexus Daily - Agents that tune themselves, research bots, and shared action layers</h1>
+<p>Five open-source and free-tier updates from this week that change what a solo operator can automate at $0. No income promises - just what shipped and why it matters for your workflow.</p>
+
+<h2>Google Research open-sources Harness&sup2; - agents that improve without retraining</h2>
+<p>An Apache 2.0 framework that optimizes everything <em>around</em> a fixed model - system prompt, guardrails, memory, tool guidance, subagents, skills, scripts and plugins - instead of touching model weights. Published October 9, it uses a Propose-Probe-Compose loop: generate candidate harness changes, run the task with each variant, and compose the winning configuration from the evidence. No ground-truth answer required.</p>
+<p>Why it matters: Google reports gains of up to 11.8 percentage points on the LAB legal benchmark and 11.5 points on WorkBuddy-Bench with GLM-5 and Gemini 3.5 Flash, weights unchanged. For anyone running agents on free tiers, this is the cheapest performance lever that exists - your harness, not your model bill, is usually what is broken. Caveat: better execution on a benchmark is not the same as correct output, so keep human review on anything legal, financial or safety-critical.</p>
+
+<h2>Sakana AI ships "The Agentic Scientist" - a research pipeline in a box</h2>
+<p>Released October 15 under Apache 2.0, this framework orchestrates multiple coding agents inside Docker to run the full research loop: hypothesis generation, experiment execution, analysis and paper drafting. A meta-controller coordinates parallel agents, and every stage is verified against a rubric before the next one starts. It supports Claude, Codex and Gemini via CLI config, and ships AutoIllustrate for editable vector figures. A development version already co-authored a paper accepted as an oral at ALIFE 2026.</p>
+<p>Why it matters: competitive research and market analysis follow the same shape as scientific research - gather, test, conclude, document. A solo founder can point this at a pile of supplier PDFs or pricing pages and get a structured draft back instead of a weekend of manual reading. Watch the security note: agents execute arbitrary commands, so run it in an isolated container, never on your main machine.</p>
+
+<h2>Builder.io Agent-Native (beta) - one action layer for agents and UIs</h2>
+<p>A free, open-source TypeScript framework launched October 14 where an AI agent and a real application interface share the same actions, data and state. You define each capability once and it is exposed through six surfaces: the UI, the agent, an HTTP API, a CLI, MCP and A2A - all with the same validation and permissions. Bring your own keys (Anthropic, OpenAI, Gemini, OpenRouter, or a local Ollama model), store in Postgres, deploy to Vercel, Netlify, Cloudflare or AWS.</p>
+<p>Why it matters: most automation dies at the handoff - the agent finishes, but a human still has to click through a dashboard to verify and ship the result. Shared state means the agent works on the same screen you do, which cuts both token spend and the "trust but verify" tax. If you have been hand-wiring a front-end around your agent scripts, this removes that glue code.</p>
+
+<h2>Claude Code 2.1.299 - idle compaction quietly cuts long-session costs</h2>
+<p>When a terminal session sits idle for about 54 minutes with more than 200K tokens of context, Claude Code now compacts it just before the one-hour prompt cache expires, so the next message does not pay to reprocess the whole conversation. Tunable via CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS, or disable with "idleCompaction": false. Related this week: Haiku 5.5 became the default Haiku at $0.10/$0.50 per million tokens with 1M context, and hooks gained onFailure: "block" so a hook that fails to start blocks the action instead of silently passing.</p>
+<p>Why it matters: prompt-cache expiry is a silent bill inflator for anyone who keeps long agent sessions open all day. If your workflow is "leave the session running, come back tonight," this one setting is the difference between paying cache-read prices on a fresh context and paying full input prices. Pair it with onFailure: "block" on any security-critical hook.</p>
+
+<h2>AI coding tools flip their defaults to admin control</h2>
+<p>In one October week, four vendors shipped 13 versions all moving the same lever: who decides what an agent is allowed to touch. Cursor 3.24 added AgentRemoteWorkspaceAuthorities so admins can lock agents to approved workspaces. Claude Code raised the MCP tool-description limit from 2,048 to 16,384 characters and added hook failure blocking. Antigravity CLI brought Windows sandboxing without requiring admin rights. Grok Build 1.0.50 now blocks deletion of active worktrees. GitHub Copilot made local sandboxing generally available.</p>
+<p>Why it matters: unattended automation is only safe when the blast radius is bounded. The incident pattern is always the same - an agent runs while you get coffee, and one wrong rm or one over-broad permission turns a save into a loss. Before you enable any scheduled or overnight agent, check whether your tool now has an admin policy, sandbox or worktree protection to turn on. It is cheaper than the backup you will wish you had.</p>
+
+<h2>Automation tip of the day</h2>
+<p>This week's theme: the cheapest way to make an agent smarter is to fix its harness, not to upgrade the model. Before your next model-switch or paid-tier upgrade, list the eight harness components Google's paper targets - system prompt, guardrails, memory, tool guidance, subagents, skills, scripts, plugins - and probe one change at a time against a task you run weekly. Teams that treat the harness as the optimization target keep their model bill flat while output quality climbs; teams that only swap models pay the increase for the same ceiling.</p>
+
+<h2>Worth a look</h2>
+<p>Anthropic's internal Scion version-control system is a glimpse of where agent-scale work is heading: with 30,000+ daily merges and CI checking out the monorepo around 25 million times a day, a seven-person team replaced Git with a centralized system where checkouts take seconds, plus a review tool called Antique. They are not open-sourcing it, but the lesson transfers - when agent volume outgrows your tooling, the fix is usually infrastructure, not more prompting. Cursor is attacking the same layer from the hosting side with its Origin marketplace of 21 launch apps. If you run multiple agents against one repo today, start thinking about merge queues and post-merge testing before conflicts start costing you hours.</p>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body>
+</html>
