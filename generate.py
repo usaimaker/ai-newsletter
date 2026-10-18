@@ -44,6 +44,11 @@ def load_issues():
 def inject_into_issue(path, body):
     """Add AdSense + sponsor/support footer to an issue page if missing."""
     changed = False
+    # Rewrite stale Vercel cross-links to GitHub Pages (Vercel Git integration dead)
+    stale = 'https://ai-gumroad-products.vercel.app'
+    if stale in body:
+        body = body.replace(stale, 'https://usaimaker.github.io/ai-gumroad-products/')
+        changed = True
     if ADSENSE_CLIENT not in body:
         body = body.replace("</head>", ADSENSE + "\n</head>", 1)
         changed = True
