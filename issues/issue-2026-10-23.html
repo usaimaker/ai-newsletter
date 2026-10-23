@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily — Issue 2026-10-23</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:0 auto;padding:24px;color:#1f2430;background:#fafafa;line-height:1.65}
+  h1{font-size:28px;margin:0 0 4px}
+  .date{color:#6b7280;font-size:14px;margin-bottom:24px}
+  h2{font-size:20px;margin:28px 0 8px;color:#4f46e5;border-bottom:2px solid #e5e7eb;padding-bottom:4px}
+  .tag{display:inline-block;background:#eef2ff;color:#4338ca;font-size:12px;padding:2px 8px;border-radius:999px;margin-bottom:6px}
+  a{color:#2563eb}
+  .tip{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:16px 18px;margin:24px 0}
+  em{color:#6b7280}
+</style>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-10-23 &middot; Practical AI tools that save money &amp; time</div>
+<p>Five fresh, practical moves this week that cut cost or effort in your AI workflows — all based on real releases reported in the last few weeks.</p>
+
+<h2>1. Claude Haiku 5.5: the new floor for high-volume agents</h2>
+<span class="tag">Cost</span>
+<p>Anthropic Haiku 5.5 lands at <strong>$0.10 in / $0.50 out per million tokens</strong> — about 90% below Haiku 4.5 and tied with GPT-6 Luna as the cheapest production-grade small model. For agents that make thousands of tiny LLM calls (classification, extraction, routing), this is the biggest cost lever you control. <em>Watch-out:</em> prompts over 100K tokens are billed at 5x, so keep routine calls short.</p>
+
+<h2>2. Free ChatGPT tier now runs GPT-6 Luna; mid-tier price parity</h2>
+<span class="tag">Free tier</span>
+<p>GPT-6 Luna is available at <strong>$0</strong> inside the ChatGPT free tier, while the paid mid-tier converged: GPT-6.1 Sol and Gemini 4 Argon both list at <strong>$2 / $10</strong> per million with cached input at $0.10. For builders, the cache price matters more than the headline — agents that resend context every step now save roughly 20% on most workloads.</p>
+
+<h2>3. DeepSeek Search + Fetch APIs are free until Oct 31</h2>
+<span class="tag">Free this month</span>
+<p>DeepSeek opened its in-house <strong>Search and Fetch APIs</strong> to all developers at $0.75 per 1,000 calls — and they are <strong>free until 2026-10-31</strong>. Wire them into your research agents this month to get web search and page extraction without paying a separate search provider, then decide before the cutoff.</p>
+
+<h2>4. AutoTask AI: autonomous tasks with an error-recovery layer</h2>
+<span class="tag">Time-saver</span>
+<p>The October launch of AutoTask AI runs natural-language tasks across 47 native integrations (calendar, email, CRM, PM) and an open API. Its differentiator is the <strong>error-recovery layer</strong>: when a subtask fails it tries a resolution path and only escalates when truly stuck. The free tier covers 10 tasks/month — enough to automate one real daily routine at no cost.</p>
+
+<h2>5. LayerFS 1.0: a filesystem built for parallel agents</h2>
+<span class="tag">Open source</span>
+<p>LayerFS 1.0 (MIT, 1,650+ stars) calls itself "the substrate under your agents": each agent mounts a complete writable workspace over shared committed history, commits its changes, and exits — so work can branch, rewind, or merge. Self-host it to coordinate a multi-agent fleet without writing your own git-and-locks glue code.</p>
+
+<div class="tip">
+<strong>Automation tip of the day</strong><br>
+Stack cheap small models with prompt caching for high-volume agent loops. Keep each Haiku 5.5 prompt under 100K tokens (avoid the 5x surcharge) and cache the repeated context your agent resends every step — that combination typically cuts an agent token bill by ~20% versus re-sending fresh each turn.
+</div>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app///////////" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body>
+</html>
