@@ -44,11 +44,23 @@ def load_issues():
 def inject_into_issue(path, body):
     """Add AdSense + sponsor/support footer to an issue page if missing."""
     changed = False
+    # Collapse malformed multi-slash hosts first: replacing the bare host below
+    # would otherwise recreate "https://host////" on every single rebuild.
+    MULTISLASH = re.compile(r'(https?://[a-zA-Z0-9.-]+\.(?:vercel\.app|github\.io))/{2,}')
+    collapsed = MULTISLASH.sub(r'\1/', body)
+    if collapsed != body:
+        body = collapsed
+        changed = True
     # Unify cross-links to canonical Vercel URLs (Pages mirror kept as backup)
-    for stale in ('https://usaimaker.github.io/ai-gumroad-products/', 'https://usaimaker.github.io/ai-gumroad-products', 'https://ai-gumroad-products.vercel.app'):
+    for stale in ('https://usaimaker.github.io/ai-gumroad-products', 'https://ai-gumroad-products.vercel.app'):
         if stale in body:
             body = body.replace(stale, 'https://ai-gumroad-products.vercel.app/')
             changed = True
+    # Normalize once more after rewriting so the result is idempotent
+    collapsed = MULTISLASH.sub(r'\1/', body)
+    if collapsed != body:
+        body = collapsed
+        changed = True
     if ADSENSE_CLIENT not in body:
         body = body.replace("</head>", ADSENSE + "\n</head>", 1)
         changed = True
