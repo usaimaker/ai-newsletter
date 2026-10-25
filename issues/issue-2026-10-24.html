@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily &#8212; Issue 2026-10-24</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:0 auto;padding:24px;color:#1f2430;background:#fafafa;line-height:1.65}
+  h1{font-size:28px;margin:0 0 4px}
+  .date{color:#6b7280;font-size:14px;margin-bottom:24px}
+  h2{font-size:20px;margin:28px 0 8px;color:#4f46e5;border-bottom:2px solid #e5e7eb;padding-bottom:4px}
+  .tag{display:inline-block;background:#eef2ff;color:#4338ca;font-size:12px;padding:2px 8px;border-radius:999px;margin-bottom:6px}
+  a{color:#2563eb}
+  .tip{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:16px 18px;margin:24px 0}
+  em{color:#6b7280}
+</style>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-10-24 &#183; free tiers, durable machines, and a reviewer for your agents</div>
+
+<h2>Workato gives the enterprise engine away free in Singapore</h2>
+<span class="tag">Agents</span><span class="tag">Free tier</span>
+<p>From October 21 anyone can open a Workato account in Singapore without a credit card and receive 50,000 one-time credits to build AI agents, recipes and MCP servers. It runs on the same governed execution layer that serves more than half of the Fortune 500. The credits do not renew and different actions burn them at different rates, so treat it as a two-week prototype budget rather than a permanent home. Paid plans start at 75 dollars a month for 2,500 credits.</p>
+<p>Worth knowing before you connect anything: Workato has not published a country-by-country data processing map for self-serve accounts. Fine for prototypes, verify residency before client records.</p>
+
+<h2>Binance AI Pro: a trading agent with a genuinely free tier</h2>
+<span class="tag">Finance</span><span class="tag">Free tier</span>
+<p>Opened to all users on October 19, Binance AI Pro turns a plain-language trading idea into an editable visual strategy, no code required. The free Standard plan includes 250,000 monthly credits with DeepSeek access; Premium costs 19.99 dollars a month for 10 million credits plus frontier models. Every strategy can be paper traded first, and live deployment needs explicit approval in an isolated sub-account you fund yourself and can revoke at any time.</p>
+<p>Even if you never trade, the permission model is the part worth copying: paper mode by default, explicit approval to go live, funds the agent cannot move on its own, and a cap of 10 strategies per user.</p>
+
+<h2>Turm.dev sells agent computers as a pool, not one VPS per tool</h2>
+<span class="tag">Infrastructure</span>
+<p>Launched October 23, Turm.dev offers durable Linux VMs that keep their disks and run around the clock, created and managed over plain SSH commands. Instead of renting one VPS per agent you buy a shared pool of CPU and RAM, with Codex, Claude Code, OpenCode, Pi, Gemini or Aider, a full browser and a desktop preinstalled. The machines run on bare metal in Germany for EU data residency. Plans start at 15 euros a month after a seven-day free trial.</p>
+
+<h2>Sonah reviews the agent session, not just the diff</h2>
+<span class="tag">Code review</span><span class="tag">Reliability</span>
+<p>Shipped October 23 alongside v0.3.0-beta.7, Sonah reads your Claude Code or Codex session together with the resulting code, then marks each instruction as done, partly done or not done. It lists decisions the agent made on its own, and flags claims contradicted by the session record &#8212; the classic being "all tests pass" directly after a failing test. Every quote is checked word for word. It runs on your existing Claude or Codex login and is free for personal projects under the Business Source License.</p>
+<p>This answers the question a diff review never can: did the agent actually do what I asked, or did it do something adjacent and report success?</p>
+
+<div class="tip">
+<strong>Automation tip of the day</strong><br>
+Before you scale any agent from one workflow to ten, write down its blast radius in one sentence: which systems it can touch, what it can change without asking, and what happens if it runs twice by accident. Agents that survive contact with production almost always have smaller permissions than the ones that were convenient to build. Shrinking scope first is cheaper than adding guardrails later, and it is the single change that most often turns a prototype into something you can hand to a client.
+</div>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &#183; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &#8212; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &#8212; that runs 24/7 at zero cost. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&#183;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&#183;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body>
+</html>
