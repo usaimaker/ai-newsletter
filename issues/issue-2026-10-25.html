@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily &#8212; Issue 2026-10-25</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:0 auto;padding:24px;color:#1f2430;background:#fafafa;line-height:1.65}
+  h1{font-size:28px;margin:0 0 4px}
+  .date{color:#6b7280;font-size:14px;margin-bottom:24px}
+  h2{font-size:20px;margin:28px 0 8px;color:#4f46e5;border-bottom:2px solid #e5e7eb;padding-bottom:4px}
+  .tag{display:inline-block;background:#eef2ff;color:#4338ca;font-size:12px;padding:2px 8px;border-radius:999px;margin-bottom:6px}
+  a{color:#2563eb}
+  .tip{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:16px 18px;margin:24px 0}
+  em{color:#6b7280}
+</style>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-10-25 &#183; five things worth wiring into your stack this weekend</div>
+
+<h2>Workato opens its enterprise automation engine with 50,000 free credits</h2>
+<span class="tag">Agents</span><span class="tag">Free tier</span>
+<p>Workato launched a self-serve tier in Singapore on October 21, and it is one of the more generous entries in this year&#8217;s agent land-grab: no credit card, 50,000 one-time credits, and access to the same governed execution engine that runs recipes for more than half of the Fortune 500. That includes AI agents (they call them Genies), Enterprise MCP servers, workflow orchestration and API management. The catch is structural rather than hidden &#8212; the credits do not renew, and every action burns them at a different rate, so you cannot calculate your runway until you start building. Paid plans begin at 75 dollars per month for 2,500 credits.</p>
+<p>Practical read: if you run a consultancy or a small operational team, this is the cheapest way to prototype genuinely governed automation &#8212; approval steps, audit trails, connector management &#8212; before committing budget. Build the recipe, measure the credit burn over two weeks, then decide. Check data residency before you point it at customer records; Workato has not published a country-by-country processing map for every self-serve account.</p>
+
+<h2>Kavela: agent workflows with a reviewer on every single run</h2>
+<span class="tag">Agents</span><span class="tag">Reliability</span>
+<p>Kavela entered closed beta on October 23 with a pitch that targets the exact failure mode that kills agent projects in production: silent failure. You describe the workflow in plain language, Kavela draws the steps, and each execution runs on an isolated cloud computer with persistent file context. The distinguishing part is a reviewer that inspects the output against a checklist you define before the run is marked complete. Existing Claude or Codex subscriptions can be connected, and an MCP server promotes local sessions into repeatable cloud automations. Pricing is 30 dollars per month billed annually for 3,000 workflow minutes, with a 14-day free trial and no card required.</p>
+<p>Why it matters for solo operators: the reviewer pattern is the difference between an automation you trust with client work and one you babysit. If you are already duct-taping check-the-output steps into your n8n flows, this is the concept to steal even if you never pay for the tool.</p>
+
+<h2>PlugVet grades 11,739 agent skills, plugins and MCP servers A through F</h2>
+<span class="tag">Security</span><span class="tag">Directory</span>
+<p>Published to Show HN on October 23, PlugVet is an independent directory that assigns hygiene grades to Claude Code skills, Cursor and Codex plugins, and MCP servers &#8212; showing the checks behind each grade and the assessment date. It has graded 11,739 entries so far, holds F-graded entries back rather than publishing them, and states plainly that a grade is a hygiene check rather than a security guarantee. Browsing is free.</p>
+<p>Use it as a first-pass filter before you install anything into an agent that touches real credentials or production data. It will not replace reading the source, but it removes most of the obvious junk in about ten seconds.</p>
+
+<h2>Vericto blocks destructive SQL from agents at the database wire protocol</h2>
+<span class="tag">Security</span><span class="tag">Databases</span>
+<p>Vericto is a SQL proxy that sits between clients (including AI agents) and a PostgreSQL or MySQL database on the native wire protocol. It parses every statement into an AST, checks it against your rules, then either forwards it or returns a normal SQL error &#8212; for example refusing a DELETE with no WHERE clause. Integration is a host and port change in your connection string. It shipped v4.16.0 on October 24 and is source-available under FSL-1.1-ALv2: free to self-host, including in commercial production, with each release converting to Apache-2.0 after two years.</p>
+<p>This is the layer most agent stacks are missing. Prompt-level guardrails are advisory; a wire-protocol parser is enforceable, and it keeps working when someone swaps the model.</p>
+
+<h2>Corgi multiplexes Claude Code, Codex, Pi and OpenCode in one terminal</h2>
+<span class="tag">Developer tools</span>
+<p>Also from October 23, Corgi is a terminal multiplexer that shows what each coding agent is doing, which ones are waiting on input, and a running activity feed &#8212; with F1 jumping to the next unread agent. It unifies launching sessions across multiple accounts, adds session search and resume, tracks per-workspace CPU, memory and GPU, and uses a cheap model to label links, worktrees and activity. Free to install via script on macOS, Linux and WSL.</p>
+
+<div class="tip">
+<strong>Automation tip of the day</strong><br>
+Split your agent spend by reversibility, not by task size. Route anything cheap to redo &#8212; lead triage, transcript summaries, first drafts, classification &#8212; to a mini model around 0.75 dollars per million input tokens, and reserve frontier models for the irreversible steps like sending client-facing output or writing to production. Add prompt caching on whatever context your agent resends every turn. Teams that make this split usually cut the monthly bill by more than half without a visible quality drop, because most steps in an agent loop were never worth the expensive model.
+</div>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &#183; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &#8212; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &#8212; that runs 24/7 at zero cost. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&#183;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&#183;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body>
+</html>
