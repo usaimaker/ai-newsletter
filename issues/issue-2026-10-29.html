@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-10-29</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#0b0b14;color:#e5e7eb;line-height:1.6}
+  h1{font-size:28px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:13px;margin-bottom:20px}
+  h2{font-size:19px;color:#a78bfa;margin-top:28px;border-bottom:1px solid #2a2a40;padding-bottom:6px}
+  a{color:#34d399}
+  .tip{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:16px 18px;margin-top:24px}
+  .src{font-size:12px;color:#9aa0aa}
+  code{background:#1a1a2e;padding:1px 5px;border-radius:4px;color:#fbbf24}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-10-29 - practical AI tools that save money and time</div>
+
+<p>Five fresh moves from the AI labs this week that you can put to work right now &#8212; most of them free or cheap enough to run all day.</p>
+
+<h2>1. OpenGCUA: an open computer-use agent that replaces paid RPA</h2>
+<p>OpenGCUA, a fully open stack for general-purpose computer-use agents, landed on arXiv (2610.22200) on October 15 and ships its core runtime on October 31, 2026. One agent script drives GUI, CLI, and vision tasks across Windows, macOS, and Linux with no per-action bill. The project quotes about $12k saved per quarter in API fees for a single data-science workflow and $50k&#8211;$150k a year for a 10,000-action-per-month workload, because it swaps three RPA licenses and their maintenance contracts for one inspectable process. Practical win: stop renting click-bots you could run free.</p>
+
+<h2>2. ManageEngine Zia: 30+ IT agents at zero token cost</h2>
+<p>ManageEngine launched 30-plus Zia agents embedded directly in its existing IT-management products, with a plan to pass 100 by year end. They run on its own Zia model inside Beijing and Shanghai datacenters, so there is no extra token, per-seat, or usage fee on top of the products customers already own. Practical win: automation of routine IT tickets, monitoring, and reporting without a new AI line item &#8212; useful when procurement balks at per-token pricing.</p>
+
+<h2>3. withHuman: a kill switch that sits in front of agent actions</h2>
+<p>withHuman, launched October 15, is an approval layer that intercepts agent tool calls before they run. Routine calls are auto-approved or denied by rule, while risky calls route to a human reviewer by email, Slack, or Discord. It speaks an open Agent Approval Protocol (AAP) and ships a CLI for Claude Code, Codex, OpenClaw, Pi, Hermes, and DeepSeek, plus Python and TypeScript SDKs for LangGraph, Pydantic AI, the OpenAI Agents SDK, CrewAI, and Mastra. Calls fail closed if the service is unreachable. Practical win: catch a destructive or duplicate action once instead of paying for it a thousand times.</p>
+
+<h2>4. DeepSeek V4 Flash: the cheapest model that still returns clean tool calls</h2>
+<p>At $0.05 per million input and $0.16 per million output tokens with a 1.3M context, DeepSeek V4 Flash is the lowest-priced model on the market that still emits reliable tool calls for agent steps. Independent trackers rank it the top pick for classification, extraction, and routing, where a wrong answer is easy to catch and retry. For 10M input plus 2M output tokens a month that is about $0.82. Practical win: route every boring classification or routing step here and reserve the expensive flagships for the few steps where judgment actually moves revenue.</p>
+
+<h2>5. UndoBench: agents recover from faults only 46.7% of the time</h2>
+<p>A new UndoBench evaluation found enterprise agents finished 83.5 percent of normal tasks but recovered correctly from a mid-run fault just 46.72 percent of the time, and naive retries created duplicate external effects in 53.3 percent of trials. Separate benchmarks show model accuracy can swing 15 points on retrieval design alone, and 77 percent of surveyed firms already paid a cost for ungoverned agents. Practical win: before you wire an agent to a system of record, require idempotency, rollback, transaction boundaries, approval gates, and state-aware retries &#8212; treat recovery behavior as a spec, not a hope.</p>
+
+<div class="tip">
+  <strong>Automation tip of the day:</strong> Charge your agents rent in tokens, then make them earn it. Most agent bills come from steps that do not need a frontier model: classification, routing, extraction, format conversion. Route those to the cheapest model that handles them (DeepSeek V4 Flash at $0.05/$0.16, or GPT-6 Luna at $0.10/$0.50) and keep a per-run budget plus a kill switch. Pair cheap routing with an approval gate like withHuman so a misstep is caught once, not multiplied across a thousand retries.
+</div>
+
+<div style="margin-top:32px;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+<h2>Sources</h2>
+<p class="src">
+- OpenGCUA open computer-use agent (WP News): https://wpnews.pro/news/why-opengcua-is-the-secret-weapon-that-could-slash-your-enterprise-ai-ops-bill<br>
+- ManageEngine Zia zero-token-cost agents (China Trade News): https://chinatradenews.com.cn/article/chanjingnews/178996<br>
+- withHuman approval layer plus cost-control agents (my2cents.ai): https://www.my2cents.ai/news/2026-10-16-commercial-agents<br>
+- Cheapest AI models for automation (OverpayingForAI): https://overpayingforai.com/best/best-ai-for-automation<br>
+- Agent reliability benchmarks UndoBench and MMEnterprise (TechSignal): https://techsignal.news/enterprise-ai/agent-reliability-not-model-quality-now-limits-enterprise-workflow-automation
+</p>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body>
+</html>
