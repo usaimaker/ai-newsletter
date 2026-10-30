@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-10-30</title>
+<style>
+  body{margin:0;background:#0b0c14;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.65}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 60px}
+  h1{font-size:30px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:21px;margin:30px 0 8px;color:#a78bfa;border-left:4px solid #a78bfa;padding-left:10px}
+  p{margin:8px 0}
+  a{color:#60a5fa}
+  .tag{display:inline-block;background:#1b1d2e;border:1px solid #2a2a40;color:#34d399;font-size:12px;padding:2px 9px;border-radius:20px;margin-right:6px}
+  .card{background:#111320;border:1px solid #20223a;border-radius:12px;padding:16px 18px;margin:14px 0}
+  .tip{background:#0f1f17;border:1px solid #1f5c3a;border-radius:12px;padding:16px 18px;margin:22px 0}
+  .src{font-size:13px;color:#9aa0aa}
+  .nl-promo{margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <div class="date">Issue 2026-10-30 &middot; Practical AI tools that save money or time</div>
+
+  <p>Five fresh, practical moves from this week's AI-automation stack - each one either cuts a bill or shaves hours off a workflow. No hype, just what ships and what it costs.</p>
+
+  <h2><span class="tag">Time</span>Vercel CI goes beta: only the touched checks run</h2>
+  <div class="card">
+    <p>Vercel CI (beta, all plans) runs only the tasks affected by each code change and allocates compute just for those checks. Vercel says it now keeps pace with its coding agents, cutting the time from git push to passing checks by 2-6x. For any team running automation pipelines, the lesson is free: stop re-running the whole suite on every commit. Trigger a check or a sub-agent only when its inputs actually changed, and you cut both wait time and compute spend in one move.</p>
+    <p>Source: <a href="https://vercel.com/blog/introducing-vercel-ci" target="_blank" rel="noopener">vercel.com/blog/introducing-vercel-ci</a></p>
+  </div>
+
+  <h2><span class="tag">Money</span>Anthropic ships token-spend reporting and pooled team budgets</h2>
+  <div class="card">
+    <p>Anthropic launched a suite of reporting tools that show enterprises exactly what their token spending produces, plus pooled group budgets so teams can cap and share a spend ceiling. If you run agents at scale, the win is governance: you stop guessing where the bill goes and start ring-fencing it per team. Pair this with a per-run token budget and a kill switch and you turn "AI costs exploded" into a solved problem.</p>
+    <p>Source: <a href="https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying" target="_blank" rel="noopener">techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying</a></p>
+  </div>
+
+  <h2><span class="tag">Automation</span>Make connects directly to Supabase backends</h2>
+  <div class="card">
+    <p>Make (the Celonis-owned automation platform) released a Supabase integration that lets its scenarios and AI agents work with Supabase projects as ordinary workflow steps - querying databases, reading logs, deploying Edge Functions, and managing projects. If your backend lives in Supabase, you can now wire no-code agents straight to it without a custom middleware layer. That removes a whole class of glue code and the maintenance it used to need.</p>
+    <p>Source: <a href="https://supabase.com/blog/automate-your-supabase-backend-with-make" target="_blank" rel="noopener">supabase.com/blog/automate-your-supabase-backend-with-make</a></p>
+  </div>
+
+  <h2><span class="tag">Time</span>GitHub Copilot projects run agent work across multiple repos</h2>
+  <div class="card">
+    <p>At GitHub Universe 2026, GitHub introduced the Copilot app, Copilot projects for running agent work across multiple repositories, and a Max tier of Copilot code review. Enterprise customers can now use Copilot features without a separate subscription and pay only for the AI credits they actually use. For multi-repo maintenance, that means one agent pass can sweep fixes across your whole estate instead of you babysitting per-repo runs - and you only pay for what fires.</p>
+    <p>Source: <a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack" target="_blank" rel="noopener">github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack</a></p>
+  </div>
+
+  <h2><span class="tag">Automation</span>Jedify Data Agents: plain-language autonomous analysts</h2>
+  <div class="card">
+    <p>Jedify formally launched Data Agents, letting business teams spin up autonomous AI analysts by describing the work in plain language. The agents run on a context graph of business data and can be called from Claude, ChatGPT, Slack and other agent platforms through the Model Context Protocol (MCP). Non-technical teams get a self-serve analyst that answers in their tools of choice - no SQL ticket queue, no waiting on the data team.</p>
+    <p>Source: <a href="https://siliconangle.com/2026/10/28/jedify-formally-launches-data-agents-for-building-ai-analysts-in-plain-language" target="_blank" rel="noopener">siliconangle.com/2026/10/28/jedify-formally-launches-data-agents-for-building-ai-analysts-in-plain-language</a></p>
+  </div>
+
+  <div class="tip">
+    <h2 style="border-color:#34d399;color:#34d399">Automation tip of the day</h2>
+    <p>Adopt the "affected-only" rule from Vercel CI for your own agents. Before launching a workflow step or sub-agent, checksum its input files or config; if nothing changed since the last run, skip it. Most recurring pipelines re-run 80% of steps on inputs that never moved. Skipping the untouched 80% cuts both your wait time and your token bill - and it is a few lines of logic, not a new tool.</p>
+  </div>
+
+  <div class="nl-promo">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+  <h2>Sources</h2>
+  <p class="src">
+  - Vercel CI beta (Vercel): https://vercel.com/blog/introducing-vercel-ci<br>
+  - Anthropic token-spend reporting plus pooled budgets (TechCrunch): https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying<br>
+  - Make Supabase integration (Supabase): https://supabase.com/blog/automate-your-supabase-backend-with-make<br>
+  - GitHub Copilot projects plus pay-per-credit Enterprise (GitHub): https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack<br>
+  - Jedify Data Agents (SiliconANGLE): https://siliconangle.com/2026/10/28/jedify-formally-launches-data-agents-for-building-ai-analysts-in-plain-language
+  </p>
+</div>
+</body>
+</html>
