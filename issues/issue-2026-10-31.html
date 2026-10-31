@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-10-31</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0f1117;color:#e7e9ee;margin:0;padding:0;line-height:1.65}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 60px}
+  h1{font-size:30px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:21px;margin:34px 0 10px;color:#a78bfa;border-top:1px solid #23262f;padding-top:22px}
+  p{margin:10px 0}
+  a{color:#34d399;text-decoration:none}
+  .tag{display:inline-block;background:#1c2433;color:#fbbf24;font-size:12px;padding:2px 9px;border-radius:20px;margin-right:6px}
+  .tip{background:#15231c;border-left:4px solid #34d399;padding:14px 18px;border-radius:8px;margin-top:12px}
+  .src{font-size:13px;color:#9aa0aa;background:#161a22;padding:14px 18px;border-radius:8px}
+  .nl-promo{background:#1a1626;border:1px solid #2a2440;border-radius:10px;padding:18px 20px;margin-top:26px}
+  .nl-promo a{color:#fbbf24}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <div class="date">Issue 2026-10-31 &middot; practical AI tools that save time and money</div>
+
+  <p>Five fresh, hands-on picks from this week's launches - each one chosen for a concrete money- or time-saving angle you can act on today.</p>
+
+  <h2><span class="tag">Oct 27</span>Replit Cloud Agents let non-engineers ship tested PRs</h2>
+  <p>Replit opened <strong>Cloud Agents</strong> to Pro and Enterprise users on Oct 27. A designer, support rep, or PM describes a change in one sentence, and the agent finds the relevant code, edits it to team style, opens the running app in an isolated sandbox, clicks through the flow like a user, fixes failures, and attaches screenshots/video to the pull request. Reviewers get proof it runs, not a text description. Internal use cut token spend 51% and dropped a routine data task from 16 minutes to 1. <strong>Why it saves money:</strong> business stakeholders stop queuing behind engineers for small, verified changes.</p>
+
+  <h2><span class="tag">Oct 26</span>GPT-6.1 Terra halves OpenAI's agent API price</h2>
+  <p>OpenAI's <strong>GPT-6.1 Terra</strong> mid-tier model lands at $1 / $5 per million tokens (cached input $0.05/M) - half of GPT-6.1 Sol - while keeping visual reasoning, computer-use, and writing. It is live in ChatGPT Work, Codex, and the API. <strong>Why it saves money:</strong> for high-volume agent loops, routing bulk reasoning and tool-calling to Terra instead of the flagship can cut API bills roughly in half with little quality loss on routine tasks.</p>
+
+  <h2><span class="tag">Oct 19</span>Inception Mercury 3: a 1,068 tok/s diffusion LLM at $0.10/M</h2>
+  <p><strong>Mercury 3</strong> is a diffusion LLM that generates tokens in parallel, claiming 1,068 tokens/sec on NVIDIA GPUs with parity to GPT-6 Luna and Claude Haiku 5.5 (vendor claims). It is OpenAI-API compatible and available via Inception, OpenRouter, Baseten, and Vercel. Launch pricing is $0.10/M input and $0.35/M output (50% discount), and new keys get 100M free tokens. <strong>Why it saves money:</strong> real-time voice and browser agents stay responsive and cheap, and the free-token grant covers a full pilot.</p>
+
+  <h2><span class="tag">Oct 7</span>IrisGo AI OS watches your workflow, then repeats it</h2>
+  <p><strong>IrisGo</strong> (backed by Andrew Ng's AI Fund, #1 Product Hunt on Oct 7) is a desktop "AI OS" for Windows 11 and Apple Silicon Macs. Its <em>Watch &amp; Learn</em> feature records you doing a multi-step admin job once (filing expenses, pulling a weekly report), drafts the next run for your approval, then repeats it on new inputs automatically. It also ships email triage and a daily priorities brief. <strong>Why it saves time:</strong> free during public beta, it automates the repetitive desktop busywork no SaaS ever quite captured.</p>
+
+  <h2><span class="tag">Rolling out</span>Claude Duet runs as a proactive always-on agent</h2>
+  <p>Anthropic's <strong>Claude Duet</strong> operates continuously across connected apps - email, calendar, and productivity tools - and keeps working after you close the app. It drafts replies, schedules meetings, and flags urgent items on its own, learning your priorities over time. <strong>Why it saves time:</strong> it shifts from reactive chat to proactive management, surfacing deadlines and conflicts before you ask, cutting the cognitive tax of staying on top of everything.</p>
+
+  <div class="tip">
+    <h2 style="border:0;padding:0;margin:0 0 8px;color:#34d399">Automation tip of the day</h2>
+    <p style="margin:0">Route your high-volume steps to the cheapest model and keep a kill switch. Build every agent loop with a <strong>model ladder</strong>: send classification, extraction, and bulk drafting to the cheapest capable model (Mercury 3 at $0.10/M or GPT-6.1 Terra at $1/M), and reserve the flagship only for the hard reasoning step. Cap each run with a per-run token budget and a hard stop, and cache repeated prompt prefixes so cached input drops to $0.05/M. The 51% token cut Replit reported came largely from exactly this discipline - not from a smarter model.</p>
+  </div>
+
+  <div class="nl-promo">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+  <h2>Sources</h2>
+  <p class="src">
+  - Replit Cloud Agents (Replit): https://blog.replit.com/cloud-agents<br>
+  - OpenAI GPT-6.1 Terra (OpenAI): https://openai.com/index/gpt-6-1-terra<br>
+  - Inception Mercury 3 (Inception): https://inceptionlabs.ai/mercury<br>
+  - IrisGo AI OS (Product Hunt): https://www.producthunt.com/products/irisgo<br>
+  - Anthropic Claude Duet (Anthropic): https://www.anthropic.com/news/claude-duet
+  </p>
+</div>
+</body>
+</html>
