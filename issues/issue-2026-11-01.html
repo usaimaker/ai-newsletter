@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-01</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0f1115;color:#e8eaed;margin:0;padding:0}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px}
+  h1{font-size:30px;margin:0 0 4px}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:21px;margin:28px 0 8px;color:#a78bfa}
+  p{line-height:1.65;color:#c9ced6}
+  a{color:#7aa2ff}
+  .tag{display:inline-block;background:#1c2230;color:#9aa0aa;font-size:12px;padding:2px 8px;border-radius:6px;margin-bottom:6px}
+  .tip{background:#14201a;border-left:4px solid #34d399;padding:14px 16px;border-radius:8px;margin:24px 0}
+  .nl-promo{background:#15171c;border:1px solid #262b36;border-radius:12px;padding:18px;margin:28px 0}
+  .src{font-size:13px;color:#8b929e;background:#10131a;padding:12px 14px;border-radius:8px}
+  .footer{color:#6b7280;font-size:12px;margin-top:28px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <div class="date">Issue 2026-11-01 &middot; practical AI tools that save money and time</div>
+
+  <h2>1. Notion Agents v2: 24-hour runs and a 90% cheaper Auto router</h2>
+  <p><span class="tag">COST</span></p>
+  <p>Notion rebuilt its agent harness (6th generation). A single agent task can now run for more than 24 hours, up from five minutes, and a new Auto router picks the model per task, claiming results on par with Opus 5.5 at about 90% lower average cost across 20-plus common use cases. The catch: existing workspaces switch to the new credit system on November 2, 2026, and Custom Agents draw from a smaller 500 Select-credit pool. Audit your Custom Agents, set spending alerts in the new Command Center, and test Auto on your most expensive runs before the switch.</p>
+
+  <h2>2. OpenAI Dots: a persistent, always-on coding assistant</h2>
+  <p><span class="tag">TIME</span></p>
+  <p>Launched October 27, Dots is OpenAI's move from reactive chat to an ambient coding agent that monitors your codebase, manages state, and handles background maintenance without manual prompts. By owning the state of the repo it aims to kill the copy-paste workflow and set a new bar for IDE-native agents. If you live in a terminal or editor all day, an always-on assistant that contributes between your prompts is the direction the whole category is heading.</p>
+
+  <h2>3. GitHub Copilot in VS Code 1.144: cloud agents and model fusion</h2>
+  <p><span class="tag">TIME + COST</span></p>
+  <p>The October 28 release lets your coding agent run in the cloud while your machine sleeps, route across models with Copilot Fusion, and even generate images. Long-running cloud agents mean you can kick off a refactor, close the laptop, and return to a finished PR. Copilot Fusion's cross-model routing is the same idea as Notion's Auto: let the system pick the cheapest model that gets the job done, which directly cuts token spend on big repos.</p>
+
+  <h2>4. Bloomberg BQuant Assistant: grounded coding for finance</h2>
+  <p><span class="tag">TIME</span></p>
+  <p>Bloomberg added a domain-grounded conversational coding assistant inside BQuant Desktop and BQuant Enterprise in late October. It writes Python and BQL queries, pulls from Bloomberg's 22,000-plus fields, builds visualizations, and inserts and runs code inside your active notebook subject to your approval. For financial pros who already pay for Terminal, this turns a natural-language question into working analysis without leaving the sandbox, and the approval gate keeps humans in control.</p>
+
+  <h2>5. SnapLogic Agentic Integration Platform: 545 prebuilt patterns</h2>
+  <p><span class="tag">TIME</span></p>
+  <p>SnapLogic's October update adds natural-language pipeline generation, 545 prebuilt agentic integration patterns, and MCP plus Bedrock RAG connectors, positioning agents as production automation actors across ERP, CRM, and IT. Instead of hand-wiring every connector, you start from a vetted pattern and let the agent monitor and control pipeline execution. For teams connecting agents to live systems, that removes weeks of integration work.</p>
+
+  <div class="tip">
+    <h2 style="margin-top:0;color:#34d399">Automation tip of the day</h2>
+    <p>Pin a model ladder and a kill switch. Route cheap, repetitive steps such as summaries, classification, and extraction to the cheapest model you trust, and keep an expensive frontier model only for the hard 10 percent. Add a per-run token budget and a hard kill switch that stops a runaway agent. Notion's Auto router proving 90% cost cuts shows model-per-task routing is real, not theoretical, so bake it into your own pipelines before the November billing cycles hit.</p>
+  </div>
+
+  <div class="nl-promo">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+  <h2>Sources</h2>
+  <p class="src">
+  - Notion Agents v2 (Rush Commerce): https://rushcommerce.dev/blog/notion-agents-24-hour-tasks-auto-router-new-credits-november-2-audit-your-custom-agents<br>
+  - OpenAI Dots (AILookup): https://ailookup.dev/news/openai-launches-dots-persistent-ai-coding-assistant<br>
+  - GitHub Copilot in VS Code 1.144 (Havoptic): https://havoptic.com/<br>
+  - Bloomberg BQuant Assistant (PR Newswire): https://www.prnewswire.co.uk/news-releases/bloomberg-introduces-bquant-assistant-to-help-financial-professionals-accelerate-data-analysis-and-coding-workflows-302921555.html<br>
+  - SnapLogic Agentic Integration (AI Agent Store): https://aiagentstore.ai/ai-agent-news/topic/business-automation/2025-12-02
+  </p>
+
+  <p class="footer">AI Automation Daily &middot; auto-generated issue. Built and deployed via GitHub Actions + Vercel.</p>
+</div>
+</body>
+</html>
