@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-02</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0f1115;color:#e8eaed;margin:0;padding:0}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px}
+  h1{font-size:30px;margin:0 0 4px}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:21px;margin:28px 0 8px;color:#a78bfa}
+  p{line-height:1.65;color:#c9ced6}
+  a{color:#7aa2ff}
+  .tag{display:inline-block;background:#1c2230;color:#9aa0aa;font-size:12px;padding:2px 8px;border-radius:6px;margin-bottom:6px}
+  .tip{background:#14201a;border-left:4px solid #34d399;padding:14px 16px;border-radius:8px;margin:24px 0}
+  .nl-promo{background:#15171c;border:1px solid #262b36;border-radius:12px;padding:18px;margin:28px 0}
+  .src{font-size:13px;color:#8b929e;background:#10131a;padding:12px 14px;border-radius:8px}
+  .footer{color:#6b7280;font-size:12px;margin-top:28px}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <div class="date">Issue 2026-11-02 &middot; practical AI tools that save money and time</div>
+
+  <h2>1. DeepSeek Super-agent goes open-source: a free Claude Code rival</h2>
+  <p><span class="tag">COST + TIME</span></p>
+  <p>DeepSeek released Super-agent on October 31 as an MIT-licensed research prototype on GitHub. It uses a router-worker design: a router keeps shared context and assigns tasks, while isolated workers run in parallel and return results. It can watch a GitHub repo and developer chats, spot issues on its own, and open pull requests without being asked. For teams this is a free, self-hostable alternative to paid coding agents, and it directly attacks the real bottleneck: human attention. One engineer can only track a few agent sessions at once, so parallel workers that need less supervision save real time. The published repo drew thousands of stars in its first day. Practical move: clone it, point it at a low-risk repo, and let it triage issues while you review.</p>
+
+  <h2>2. Microsoft open-weights 4B computer-use model</h2>
+  <p><span class="tag">COST</span></p>
+  <p>Microsoft published Mage-VL-Cowork, a four-billion-parameter computer-use model under the Apache 2.0 license. It switches between screen interaction and terminal commands and reports a 66 percent score on 361 OSWorld-Verified tasks. Because the weights are open, you can run it on your own hardware instead of paying per call for a hosted agent. For repeatable desktop automation such as form filling, report downloads, and data entry, a self-hosted model removes the per-task API bill. The catch is setup effort, and the benchmark is developer-run, but for teams with steady GUI work the math favors owning the model.</p>
+
+  <h2>3. DeepSeek Search and Fetch now billed at 0.75 dollars per 1,000 calls</h2>
+  <p><span class="tag">COST</span></p>
+  <p>The free exemption for DeepSeek server-side Search and Fetch calls ended on November 1. Each API now costs 0.75 dollars per 1,000 successful requests, separate from token charges. Failed requests, empty results, and timeouts are not billed. The lesson for agent builders: retrieval is no longer free, so budget for tool calls, not just tokens. DeepSeek Flash stays among the cheapest capable models, so pair cheap calls with cheap models. Add a per-run cap on tool calls so a chatty agent cannot quietly run up the bill.</p>
+
+  <h2>4. Particle-1: 38 percent fewer tokens at 0.25 dollars in, 1 dollar out</h2>
+  <p><span class="tag">COST</span></p>
+  <p>Particle AI launched Particle-1 on October 28, a small fine-tune of DeepSeek V4.1 Flash that does the same coding work with about 38 percent fewer output tokens. Its card is 0.25 dollars input, 0.03 cached, 1 dollar output, and half that from 20:30 to 04:00 New York time. Run heavy coding jobs in the off-peak window and a task that costs 0.14 dollars at peak drops toward 0.07 dollars. The takeaway: a lighter model plus off-peak scheduling can beat a bigger model on price without losing the result.</p>
+
+  <h2>5. Figma October 29 report: agent 20 percent faster, 60 percent fewer undos</h2>
+  <p><span class="tag">TIME</span></p>
+  <p>Figma published an October 29 engineering report showing typical agent tasks became about 20 percent faster between beta and general availability, with 33 percent higher user ratings and 60 percent fewer undos. The gains came from changes across models, tools, and the agent system, not one magic model. For design and product teams, a faster agent means less waiting and less cleanup after each run. The broader signal: specialized agents tuned to a workflow beat generic ones, so invest in tooling that fits your actual steps.</p>
+
+  <div class="tip">
+    <h2 style="margin-top:0;color:#34d399">Automation tip of the day</h2>
+    <p>Budget tool calls, not just tokens. With DeepSeek now billing search and fetch per call and Particle pricing by time of day, the old habit of counting only tokens misses real cost. Add a per-run cap on tool calls, shift heavy agent runs to off-peak windows, and route retrieval to the cheapest model you trust. A chatty retrieval agent can spend more on calls than on text, so measure both and cap both.</p>
+  </div>
+
+  <div class="nl-promo">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+  <h2>Sources</h2>
+  <p class="src">
+  - DeepSeek Super-agent (Realist / Stackademic): https://english.realtribune.ru/deepseek-releases-open-source-analog-of-claude-code &nbsp; https://stackademic.com/blog/deepseek-super-agent-router-worker-coding-agents<br>
+  - Microsoft Mage-VL-Cowork (AI Impact Hub): https://aiimpacthub.com/ai-news<br>
+  - DeepSeek Search and Fetch billing (AI Impact Hub / DeepSeek docs): https://aiimpacthub.com/ai-news &nbsp; https://api-docs.deepseek.com<br>
+  - Particle-1 pricing (Token Cost): https://tokencost.app/blog/particle-1-pricing<br>
+  - Figma agent report (AI Impact Hub): https://aiimpacthub.com/ai-news
+  </p>
+
+  <p class="footer">AI Automation Daily &middot; auto-generated issue. Built and deployed via GitHub Actions + Vercel.</p>
+</div>
+</body>
+</html>
