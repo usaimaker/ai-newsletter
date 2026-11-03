@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-03</title>
+<style>
+  body{background:#0d0f14;color:#d7dbe2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;line-height:1.7}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px}
+  h1{font-size:30px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:20px;color:#e8ecf3;margin:28px 0 8px;line-height:1.35}
+  p{margin:8px 0}
+  a{color:#7aa2ff}
+  .tag{display:inline-block;background:#1c2230;color:#9aa0aa;font-size:12px;padding:2px 8px;border-radius:6px;margin-bottom:6px}
+  .tip{background:#14201a;border-left:4px solid #34d399;padding:14px 16px;border-radius:8px;margin:24px 0}
+  .nl-promo{background:#15171c;border:1px solid #262b36;border-radius:12px;padding:18px;margin:28px 0}
+  .src{font-size:13px;color:#8b929e;background:#10131a;padding:12px 14px;border-radius:8px}
+  .footer{color:#6b7280;font-size:12px;margin-top:28px}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <div class="date">Issue 2026-11-03 &middot; practical AI tools that save money and time</div>
+
+  <h2>1. Mistral Large 4 cuts output price by half to $2.10</h2>
+  <p><span class="tag">COST</span></p>
+  <p>The November 1 model leaderboard shows Mistral Large 4 now lists output at $2.10 per million tokens, a 49.8 percent cut that undercuts every other top-five model on price. Released October 6, it is Mistral&rsquo;s new flagship and the only European lab in the top tier. For teams running steady summarization, classification, or draft generation, swapping a $10&ndash;$20 output model for $2.10 roughly quarters the bill with little quality loss on routine work. Practical move: route your high-volume, low-risk calls to Mistral Large 4 and keep the expensive frontier model only for the final, hard step.</p>
+
+  <h2>2. NVIDIA open-sources Run:ai GPU scheduler under Apache 2.0</h2>
+  <p><span class="tag">COST + TIME</span></p>
+  <p>NVIDIA released the full Run:ai platform as open source on GitHub under Apache 2.0, giving teams production-grade GPU scheduling, quota, and workload management they can self-host for free. It splits into four adoptable modules, including the CNCF-sandbox KAI Scheduler and a GPU Fractioning Operator that enforces hard memory caps per workload. Instead of buying a paid subscription, a platform team can fork the repo, run it on existing Kubernetes or OpenShift clusters, and pack GPUs far more tightly. The time win is real too: no sales cycle, just clone and deploy on a simulated cluster first.</p>
+
+  <h2>3. DeepSeek Harness: open-source agent runtime with Claude Code and Codex as sub-agents</h2>
+  <p><span class="tag">COST + TIME</span></p>
+  <p>DeepSeek open-sourced Harness, an agent runtime framework (RC.8 on November 2) that handles multi-agent collaboration, tool-call management, task orchestration, and sandbox security isolation. Its notable trick: Claude Code and Codex can be installed as profile bundles and summoned as sub-agents, making Harness a unified scheduling layer rather than another model. For builders, this is a free, self-hostable control plane that ties your existing coding agents together, so you stop paying per seat for every orchestration tool and keep one place to manage flows.</p>
+
+  <h2>4. LLM-as-a-Verifier: open-source self-check lifts success to 88 percent for $0.11</h2>
+  <p><span class="tag">COST + QUALITY</span></p>
+  <p>An open-source framework called LLM-as-a-Verifier climbed to GitHub&rsquo;s second-hottest repo. Using a Best-of-5 self-verification strategy on Terminal-Bench 2.1, it pushed DeepSeek V4 Flash task success from 79 percent to 88 percent, beating the closed Claude Fable 5 at about $0.11 per task, under one-eleventh the cost. It also supports concurrent web search and a persistent Windows PowerShell session via PTY. The lesson: a cheap model plus a cheap verifier out-executes an expensive model alone, so add a verification loop before you reach for a bigger bill.</p>
+
+  <h2>5. Alibaba Qovest: one-sentence AI research workbench (free trial, $99&ndash;$199/mo)</h2>
+  <p><span class="tag">TIME</span></p>
+  <p>Alibaba Cloud launched Qovest on November 2, an AI investment-research workbench for professional investors. You describe a research need in one sentence and Qovest pulls data, gathers material, analyzes, and generates a report, then keeps tracking the target on a schedule. Results accumulate in a research space so work carries forward instead of restarting each time. It ships a free trial and monthly plans at 99 or 199 yuan. For anyone who repeats the same market lookups weekly, that is hours saved and a replaceable manual workflow.</p>
+
+  <div class="tip">
+    <h2 style="margin-top:0;color:#34d399">Automation tip of the day</h2>
+    <p>Add a self-verification step, not just a bigger model. LLM-as-a-Verifier shows a $0.11 check can lift a cheap model past a flagship on task success. Wrap your agent runs with a verifier loop, route high-volume calls to the new $2.10 Mistral Large 4, and if you run GPU-heavy pipelines, self-host the open Run:ai scheduler to stop renting idle compute. Measure cost per finished task, not per token.</p>
+  </div>
+
+  <div class="nl-promo">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+  <h2>Sources</h2>
+  <p class="src">
+  - Mistral Large 4 price cut (Gradient leaderboard, Nov 1): https://gradient.news/leaderboard<br>
+  - NVIDIA Run:ai open source (GPU scheduling, Apache 2.0): https://kwkr.cn/news/626315<br>
+  - DeepSeek Harness open-source agent runtime (RC.8): https://www.hqwc.cn/a/1268596.html<br>
+  - LLM-as-a-Verifier GitHub hot #2, $0.11 per task: https://www.hqwc.cn/a/1268596.html<br>
+  - Alibaba Qovest AI research workbench (Nov 2): https://www.toutiao.com/article/7703478303109186089
+  </p>
+
+  <p class="footer">AI Automation Daily &middot; auto-generated issue. Built and deployed via GitHub Actions + Vercel.</p>
+</div>
+</body>
+</html>
