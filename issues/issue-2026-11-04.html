@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-04</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:32px auto;padding:0 18px;color:#1a1a1a;line-height:1.65}
+  h1{font-size:28px;margin-bottom:4px}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:20px;margin-top:30px;border-bottom:2px solid #e6e6ef;padding-bottom:6px}
+  a{color:#6d3bff;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .tag{display:inline-block;background:#f0ecff;color:#6d3bff;font-size:12px;padding:2px 8px;border-radius:10px;margin-bottom:8px}
+  .tip{background:#fff8e6;border-left:4px solid #ffb300;padding:14px 16px;border-radius:6px;margin-top:14px}
+  .sponsor{background:#f7f6ff;border:1px solid #e6e2ff;border-radius:10px;padding:16px;margin-top:36px}
+  .src{font-size:13px;color:#5b6b7b;background:#f4f6f8;padding:12px 14px;border-radius:8px}
+  .footer{font-size:12px;color:#9aa0aa;margin-top:28px}
+</style>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-11-04 &middot; practical AI tools that save money &amp; time</div>
+
+<p>Five fresh automation stories from the last few days &mdash; each with a concrete, money-or-time-saving angle you can apply this week.</p>
+
+<h2><span class="tag">Open Source</span> DeepSeek open-sources its Super-agent base (MIT)</h2>
+<p>DeepSeek's Harness team released <strong>dsh-superagent</strong> under MIT on Oct 31. It splits an agent into a always-on <strong>Router</strong> (receives messages from IM, GitHub, email) and parallel <strong>Workers</strong> that each keep their own context. In internal use it proactively spots bugs in group chats and files fix PRs without being @-mentioned. Median task time dropped to 12.4 min vs 29.5 min for single-session setups. Free to self-host &mdash; skip the per-token bill entirely for background coding ops.</p>
+<p><a href="https://github.com/deepseek-ai/dsh-superagent-prototype" target="_blank" rel="noopener">github.com/deepseek-ai/dsh-superagent-prototype</a></p>
+
+<h2><span class="tag">Computer Use</span> Vercel agent-desktop: control the desktop without screenshots</h2>
+<p>Vercel Labs open-sourced <strong>agent-desktop</strong>, a Rust CLI + C library that lets coding agents read and drive desktop apps through the OS accessibility tree instead of screenshots. It runs on macOS, Windows and Linux, and on complex Electron apps it cuts token usage by <strong>78&ndash;96%</strong>. If your agents currently "look" at the screen via image captures, this swaps a huge cost driver for a cheap text stream.</p>
+<p><a href="https://vercel.com/blog/agent-desktop" target="_blank" rel="noopener">vercel.com/blog/agent-desktop</a></p>
+
+<h2><span class="tag">Cost Cut</span> TokenEconomizer compresses agent context 18&ndash;31%</h2>
+<p>Microsoft Research + UC Berkeley open-sourced <strong>TokenEconomizer</strong>, which learns from a repo's past sessions and trims redundant context before each run. Across 277 SWE-Bench tasks and five agent/model combos it lowered average cost by <strong>18.4% to 30.9%</strong>. It plugs into Claude Code, Codex, GitHub Copilot CLI and Pi. Best for teams with a continuous, single-repo history to learn from.</p>
+<p><a href="https://github.com/microsoft/TokenEconomizer" target="_blank" rel="noopener">github.com/microsoft/TokenEconomizer</a></p>
+
+<h2><span class="tag">Lesson</span> LinkedIn held AI cost flat by distilling small models</h2>
+<p>LinkedIn revealed its AI hiring assistant now serves 25,000+ paying companies while compute cost stayed flat year-over-year &mdash; by replacing most OpenAI calls with <strong>distilled lightweight models</strong> for candidate search, ranking and outreach messaging. Savings reached <strong>67%</strong> versus a year ago on those steps. Takeaway: for narrow, high-volume automation tasks, a small fine-tuned model beats a frontier API call on both price and latency.</p>
+<p><a href="https://finance.sina.com.cn/stock/usstock/c/2026-11-04/doc-inixqhku6189994.shtml" target="_blank" rel="noopener">finance.sina.com.cn &middot; LinkedIn cost story</a></p>
+
+<h2><span class="tag">Coding Agent</span> Factory Droid 1.0: model-independent harness</h2>
+<p>Factory shipped <strong>Droid 1.0</strong>, a coding-agent framework that is not tied to any single model &mdash; the model itself writes the program and can fire hundreds of tool calls in one request. Its base prompt is <strong>37% smaller</strong>, and Factory reports a higher pass rate than other harnesses it tested on the same model. Portable across models, so you can chase the cheapest capable option without rewriting your pipeline.</p>
+<p><a href="https://www.factory.ai/blog/droid-1-0" target="_blank" rel="noopener">factory.ai/blog/droid-1-0</a></p>
+
+<h2>Automation tip of the day</h2>
+<div class="tip">
+<p><strong>Kill the screenshot tax.</strong> If your computer-use agents capture the screen as images, you are paying for thousands of vision tokens per action. Switch to an accessibility-tree driver (Vercel agent-desktop style) &mdash; it cut token use 78&ndash;96% on Electron apps. Stack it with a context compressor like TokenEconomizer for another 18&ndash;31% off your runs. Two changes, one afternoon, double-digit percentage savings on every agent hour.</p>
+</div>
+
+<div class="sponsor">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+<h2>Sources</h2>
+<p class="src">
+- DeepSeek Super-agent open source (dsh-superagent, MIT, Oct 31): https://github.com/deepseek-ai/dsh-superagent-prototype<br>
+- Vercel agent-desktop Rust/C accessibility-tree driver (Nov 1): https://vercel.com/blog/agent-desktop<br>
+- Microsoft + UC Berkeley TokenEconomizer (18.4-30.9% cheaper, Nov 1): https://github.com/microsoft/TokenEconomizer<br>
+- LinkedIn distilled models hold cost flat, 67% saving (Nov 4): https://finance.sina.com.cn/stock/usstock/c/2026-11-04/doc-inixqhku6189994.shtml<br>
+- Factory Droid 1.0 model-independent harness (Nov 1): https://www.factory.ai/blog/droid-1-0
+</p>
+
+<p class="footer">AI Automation Daily &middot; auto-generated issue. Built and deployed via GitHub Actions + Vercel.</p>
+</body>
+</html>
