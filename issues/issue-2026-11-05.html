@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Nexus Daily — Issue 2026-11-05: Cheaper Agents, Smarter Deployments</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:32px auto;padding:0 18px;color:#1a1a1a;line-height:1.65}
+  h1{font-size:28px;margin-bottom:4px}
+  .date{color:#9aa0aa;font-size:14px;margin-bottom:24px}
+  h2{font-size:20px;margin-top:30px;border-bottom:2px solid #e6e6ef;padding-bottom:6px}
+  a{color:#6d3bff;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .tag{display:inline-block;background:#f0ecff;color:#6d3bff;font-size:12px;padding:2px 8px;border-radius:10px;margin-bottom:8px}
+  .tip{background:#fff8e6;border-left:4px solid #ffb300;padding:14px 16px;border-radius:6px;margin-top:14px}
+  .sponsor{background:#f7f6ff;border:1px solid #e6e2ff;border-radius:10px;padding:16px;margin-top:36px}
+  .src{font-size:13px;color:#5b6b7b;background:#f4f6f8;padding:12px 14px;border-radius:8px}
+  .footer{font-size:12px;color:#9aa0aa;margin-top:28px}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>AI Nexus Daily — Issue 2026-11-05</h1>
+<p class="meta">Your 5-minute brief on AI automation that saves money and time. Fresh for Thursday, November 5, 2026.</p>
+
+<h2>1. Claude Opus 5.5 is now the default — and 20% cheaper</h2>
+<p>Anthropic’s Opus 5.5 is now the model it tells most customers to start with: <strong>$4 / $20 per million</strong> input/output tokens, about 20% below Opus 5 and over 30% faster. It also makes ~85% fewer attempts to break containment, which matters for long unattended agents. It is on $20/mo Claude plans, Claude Code, and the API. <em>Practical read:</em> if you run background agents, move your default worker to Opus 5.5 and watch both the bill and the "why did it stop?" incidents drop.</p>
+
+<h2>2. LinkedIn cut agent cost 67% by distilling small models</h2>
+<p>Microsoft’s LinkedIn now runs its AI recruiting assistant — used by <strong>25,000+ paying enterprises</strong> — on knowledge-distilled open-source small models for candidate search, ranking, and outreach drafting. Result: up to <strong>67% lower</strong> run cost versus a year ago, with flat total cost despite roughly 25% more usage. <em>Lesson:</em> distill or fine-tune a small model for each narrow, repeated automation step instead of calling a frontier model for everything.</p>
+
+<h2>3. LinearB Agentic Studio gives coding agents real context (Nov 2)</h2>
+<p>LinearB launched Agentic Studio, which turns software-delivery data into engineering context coding agents can use — linking PRs to services, recent incidents, and ownership history. Its first agent skill matches the <em>effort</em> an agent spends to the <em>risk</em> of the change, so low-risk tweaks get a lighter, cheaper pass. <em>Time-saving angle:</em> stop feeding agents a bare code snapshot; give them the "why this matters" so reviews do not bottleneck.</p>
+
+<h2>4. Summit ships agent-native deployment in 36 hours (Nov 3)</h2>
+<p>A four-person team built Summit in 36 hours: a Railway-style PaaS where AI agents run as <strong>persistent, sandboxed, per-user workloads with cost tracking</strong> — not a fire-and-forget API call. Agents get isolated gVisor sandboxes, durable state, and per-project billing. <em>Takeaway:</em> if your agents keep "losing state when the process dies," you need agent-native deployment, not another wrapper around a chat call.</p>
+
+<h2>5. TokenEconomizer compresses context, cuts agent cost 18–30% (Nov 1)</h2>
+<p>Microsoft Research and UC Berkeley open-sourced <strong>TokenEconomizer</strong>, a context compressor that learns from a repo’s own past sessions and strips redundant context. Across 277 SWE-Bench tasks it cut agent cost <strong>18.4–30.9%</strong> on Claude Code, Codex, GitHub Copilot CLI, and Pi. <em>Money angle:</em> most agent overspend is duplicated context, not wasted reasoning — compress before you upgrade the model.</p>
+
+<div class="tip">
+<h2>Automation tip of the day</h2>
+<p>Build a <strong>model ladder with a kill switch</strong>. Route triage, classification, and short extraction to the cheapest model (Claude Haiku 5.5 and GPT-6 Luna both sit at <strong>$0.10 / $0.50</strong> per million). Use a mid-tier model for drafting and retrieval. Reserve a flagship only where it measurably wins on your own eval set. Set a per-run token budget and a hard kill switch. Frontier prices are falling fast — GPT-6.1 Terra is half of Sol, Cursor’s entry dropped to $8 — so design every workflow to swap models without a rewrite and take the savings as they land.</p>
+</div>
+<div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+<h2>Sources</h2>
+<p class="src">
+- DeepSeek Super-agent open source (dsh-superagent, MIT, Oct 31): https://github.com/deepseek-ai/dsh-superagent-prototype<br>
+- Vercel agent-desktop Rust/C accessibility-tree driver (Nov 1): https://vercel.com/blog/agent-desktop<br>
+- Microsoft + UC Berkeley TokenEconomizer (18.4-30.9% cheaper, Nov 1): https://github.com/microsoft/TokenEconomizer<br>
+- LinkedIn distilled models hold cost flat, 67% saving (Nov 4): https://finance.sina.com.cn/stock/usstock/c/2026-11-04/doc-inixqhku6189994.shtml<br>
+- Factory Droid 1.0 model-independent harness (Nov 1): https://www.factory.ai/blog/droid-1-0
+</p>
+
+<p class="footer">AI Automation Daily &middot; auto-generated issue. Built and deployed via GitHub Actions + Vercel.</p>
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body>
+</html>
