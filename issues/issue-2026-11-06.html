@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-06</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;background:#0b0b14;color:#e5e7eb;margin:0;padding:0;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:28px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:13px;margin-bottom:24px}
+  h2{font-size:19px;margin:28px 0 8px;color:#c4b5fd;border-top:1px solid #1f2030;padding-top:18px}
+  .tag{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#a78bfa;background:#171327;padding:2px 8px;border-radius:6px;margin-bottom:8px}
+  p{margin:8px 0}
+  a{color:#a78bfa}
+  .tip{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:16px 18px;margin:24px 0}
+  .src{font-size:13px;color:#9aa0aa}
+  .footer{margin-top:32px;padding-top:16px;border-top:1px solid #1f2030;font-size:12px;color:#9aa0aa}
+  .sponsor{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:16px 18px;margin:24px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-11-06 &middot; Free AI kits, cheaper models, and automation that pays for itself</div>
+
+<p>Five fresh, practical moves from this week that cut cost or save time - plus a tip you can apply today.</p>
+
+<h2>1. Friday: run Claude Code + Codex as a local agent crew</h2>
+<p><span class="tag">Open source &middot; Nov 1</span></p>
+<p>Friday is a new open-source orchestration layer (github.com/splashxmoon/friday) that runs Claude Code and Codex as collaborative "crews" on your own machine. You assign frontend to one agent, backend to another, and testing to a third; they share context through a knowledge graph and hand off work automatically. No mandatory cloud, config-driven, and you keep full control of the workflow.</p>
+<p><strong>Why it saves money:</strong> it is free and local-first, so there are no per-seat cloud fees and no vendor lock-in. You get each model's strength (Claude for architecture, Codex for fast generation) in one project, and you can compare outputs side by side before merging.</p>
+
+<h2>2. Revolut cut AI coding cost ~10x by dropping Claude for self-hosted models</h2>
+<p><span class="tag">Infra &middot; Nov 3</span></p>
+<p>Revolut replaced its Claude-based coding assistant with self-hosted open-source models running on 56 NVIDIA B200 GPUs serving ~2,000 engineers. The result: AI coding cost fell roughly 90%, and the bill is now fixed instead of a surprise invoice at month end. Frontier APIs became the exception, not the default.</p>
+<p><strong>Why it matters:</strong> for high-volume coding, self-hosting removes the "calls x unit price" multiplier that balloons agent bills. The trade-off is real hardware and ops cost, but it shows the ceiling on API spend is a choice, not a law of physics.</p>
+
+<h2>3. LinkedIn froze its AI cost at scale with distilled lightweight models</h2>
+<p><span class="tag">Cost control &middot; Nov 4</span></p>
+<p>LinkedIn's AI recruiting assistant now serves 25,000+ paying enterprises, yet its running cost has stayed flat year over year. The trick: knowledge-distilling frontier models into small, task-specific models for candidate search, ranking, and outreach messages - up to 67% cheaper than calling the frontier model directly. No extra GPU spend is planned through mid-2027.</p>
+<p><strong>Why it matters:</strong> distill frontier output for high-volume, narrow tasks and your cost curve decouples from usage growth. As usage climbs, the bill stays put.</p>
+
+<h2>4. Devloops: adversarial agent loops that humans still control</h2>
+<p><span class="tag">Safety &middot; Nov 1</span></p>
+<p>Devloops (github.com, open source) splits coding automation into three adversarial roles: a producer files issues, a worker implements them as PRs, and a skeptical gatekeeper tries to break each PR before approval. Agents are explicitly forbidden from merging - a human makes the final call, and security-sensitive paths get a "gatekeeper:needs-human" label. It is Python 3.8+ with no third-party deps, driven by GitHub CLI.</p>
+<p><strong>Why it saves time:</strong> fewer reverted merges and fewer security incidents. The adversarial review catches defects automatically, so humans only spend minutes on the key merge decision.</p>
+
+<h2>5. Cheapest automation models right now: GLM 4.7 Flash and MiMo V2.5</h2>
+<p><span class="tag">Pricing &middot; Nov 4</span></p>
+<p>Per current API pricing, GLM 4.7 Flash is the cheapest capable automation model at $0.06 in / $0.40 out per 1M tokens - open weights, tool-call support, 200k context. MiMo V2.5 carries the lowest official output price at $0.13 in / $0.27 out per 1M. Both beat frontier pricing by an order of magnitude for classification, extraction, and routing.</p>
+<p><strong>Why it matters:</strong> automation is where cost compounds. A model at $15/out per 1M running thousands of tasks a day gets expensive fast; routing bulk simple steps to a $0.27-$0.40/out model is the single biggest lever.</p>
+
+<div class="tip">
+<h2 style="border:0;padding:0;margin:0 0 8px;color:#c4b5fd">Automation tip of the day</h2>
+<p><strong>Build a model ladder with a kill switch.</strong> Route high-volume, simple steps (classify, extract, route) to the cheapest open-weights model - GLM 4.7 Flash or MiMo V2.5. Reserve frontier models for hard reasoning only. Put a hard per-run token budget and a kill switch (like the agent kill switch CrowdStrike just shipped) on every loop so a runaway agent cannot blow the monthly bill. Cache proven workflows so repetitive jobs skip re-reasoning entirely.</p>
+</div>
+
+<div class="sponsor">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+<h2>Sources</h2>
+<p class="src">
+- Friday local agent crew framework (Nov 1): https://github.com/splashxmoon/friday<br>
+- Revolut self-hosted models cut AI coding cost ~10x (The Register, Nov 3): https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345<br>
+- LinkedIn distilled models hold cost flat, 67% saving (Nov 4): https://finance.sina.com.cn/stock/usstock/c/2026-11-04/doc-inixqhku6189994.shtml<br>
+- Devloops adversarial agent loops (Nov 1): https://clawdbytes.com/article/2026-11-01-show-hn-devloops-adversarial-agent-loops-so-humans-only-make-the-key-decision.html<br>
+- Cheapest automation models GLM 4.7 Flash / MiMo V2.5 (Nov 4): https://overpayingforai.com/cn/best/best-ai-for-automation &middot; https://17nas.com/llm-leaderboard.php?view=cheap
+</p>
+
+<p class="footer">AI Automation Daily &middot; auto-generated issue. Built and deployed via GitHub Actions + Vercel.</p>
+</div>
+</body>
+</html>
