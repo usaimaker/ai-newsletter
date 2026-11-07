@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-07</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;background:#0b0b14;color:#e5e7eb;margin:0;padding:0;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:28px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:14px;margin:0 0 24px}
+  h2{font-size:20px;margin:28px 0 8px;color:#a78bfa}
+  p{margin:0 0 14px}
+  .tag{display:inline-block;background:#1b1b2b;color:#34d399;font-size:12px;padding:2px 8px;border-radius:6px;margin:0 0 6px}
+  a{color:#7dd3fc}
+  .tip{background:#12121f;border:1px solid #2a2a3a;border-radius:12px;padding:16px 18px;margin:24px 0}
+  .tip h2{margin-top:0;color:#fbbf24}
+  hr{border:none;border-top:1px solid #23233a;margin:28px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <p class="date">Issue 2026-11-07 &middot; Practical AI tools that save you time and money</p>
+
+  <h2>1. Ripple-65B Preview: a frontier-grade coding agent you can self-host</h2>
+  <p><span class="tag">Open weights</span></p>
+  <p>Ricursive Intelligence (founded by ex-Google Brain engineers) released <strong>Ripple-65B Preview</strong> on Nov 4, 2026 &mdash; a 65B dense open-weight model that claims the U.S. open-weight SOTA for agentic coding: 80.52 on TerminalBench 2.1 and a lead on SWE-bench Pro v2.0 Hard. It ships under Apache 2.0 with a 1M-token context and is already on Hugging Face, Together AI, GMI Cloud and OpenRouter.</p>
+  <p><strong>Why it saves money:</strong> the team says total dev cost was about USD 32M &mdash; roughly one-tenth of the previous open-weight agentic-coding SOTA. Because the weights are open, you run the agent on your own GPUs or cheap cloud for near-zero marginal cost instead of paying per-token SaaS fees. For any team doing real software automation, that is a 5-10x cost cut versus Claude Code-style API pricing.</p>
+
+  <h2>2. DeepSeek Super-Agent: an open-source teammate that watches your chat</h2>
+  <p><span class="tag">MIT &middot; Proactive</span></p>
+  <p>DeepSeek's Harness team open-sourced <strong>Super-Agent</strong> on Nov 1, 2026. Instead of waiting for a prompt, it monitors developer group chats (Slack, WeChat, Discord) and proposes fixes when it spots a bug or question. On the command line it parses multi-file repos, runs shell commands, patches code until tests pass, and drafts git commits and pull requests.</p>
+  <p><strong>Why it saves time:</strong> DeepSeek's MoE architecture cuts inference cost up to 80% versus proprietary coding agents, and self-hosting means your conversation data never leaves your infrastructure. Junior devs quietly benefit from solutions generated during senior discussions &mdash; ambient help without breaking flow.</p>
+
+  <h2>3. Hippocampus: give your coding agent a permanent memory</h2>
+  <p><span class="tag">Local &middot; Zero API cost</span></p>
+  <p>Launched Nov 3-4, 2026, <strong>Hippocampus</strong> is a local memory layer for Claude Code. It permanently remembers your business rules, tone, and spreadsheet schema across every session &mdash; 100% on your machine with no extra API spend.</p>
+  <p><strong>Why it saves time:</strong> every time you opened a new terminal to tweak a pricing table you had to re-explain your entire setup. Install Hippocampus once and that context persists. Pair it with Revefi's Agent Analyzer GitHub plugin to catch missing edge cases before a customer ever sees an error.</p>
+
+  <h2>4. Gemini 4 Carbon: a model that self-heals your broken automations</h2>
+  <p><span class="tag">Reliability</span></p>
+  <p>Google deployed <strong>Gemini 4 Carbon</strong> under its Fairwind program for cybersecurity defenders on Nov 3, 2026 (score of 59 on Intelligence Index V5). A practical use teams are already exploiting: point it at flaky webhook and integration scripts so it diagnoses and patches failures on its own.</p>
+  <p><strong>Why it saves time:</strong> brittle glue code between SaaS tools is where most automation breaks at 2 a.m. A model that self-heals broken webhook scripts turns on-call firefighting into a background task &mdash; fewer pages, fewer manual fixes.</p>
+
+  <h2>5. Claude Cowork: no-code automation for non-technical operators</h2>
+  <p><span class="tag">No-code</span></p>
+  <p>The November 2026 tool wave put <strong>Claude Cowork</strong> in the spotlight &mdash; an agent living inside the Claude desktop app that carries out tasks across your files and apps without writing code. Founders use it to rename 200 messy pitch decks, turn a folder of call transcripts into a complaint table, draft grant applications, and sort invoices by month and supplier.</p>
+  <p><strong>Why it saves money:</strong> you do not need an engineer to automate the messy middle of admin work. At roughly USD 17-20 per month it handles the filing, sorting and first-drafting that used to eat staff hours &mdash; the hidden cost of AI is never the subscription, it is the gluing.</p>
+
+  <div class="tip">
+    <h2>Automation tip of the day: build a model ladder</h2>
+    <p>November 2026 pricing makes the ladder obvious: small models Claude Haiku 5.5 and GPT-6 Luna both sit at USD 0.10 in / USD 0.50 out, while frontier models run USD 10 / USD 50. Route routing, extraction and classification to the cheap tier and reserve frontier models only for hard reasoning. US labs charge 5x for output vs input, so long-generation apps save most by switching to DeepSeek or Mistral (about 3x). Add a per-run token budget and a kill switch so a runaway loop can never silently drain the bill. Result: 5-10x lower cost with no quality loss on easy steps.</p>
+  </div>
+
+  <hr>
+  <div class="sponsor" style="margin-top:8px">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</div>
+</body>
+</html>
