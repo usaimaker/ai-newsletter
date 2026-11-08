@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-08</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;background:#0b0b14;color:#e5e7eb;margin:0;padding:0;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:28px;margin:0 0 4px;color:#fff}
+  .date{color:#9aa0aa;font-size:14px;margin:0 0 24px}
+  h2{font-size:20px;margin:28px 0 8px;color:#a78bfa}
+  p{margin:0 0 14px}
+  .tag{display:inline-block;background:#1b1b2b;color:#34d399;font-size:12px;padding:2px 8px;border-radius:6px;margin:0 0 6px}
+  a{color:#7dd3fc}
+  .tip{background:#12121f;border:1px solid #2a2a3a;border-radius:12px;padding:16px 18px;margin:24px 0}
+  .tip h2{margin-top:0;color:#fbbf24}
+  hr{border:none;border-top:1px solid #23233a;margin:28px 0}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI Automation Daily</h1>
+  <p class="date">Sunday, November 8, 2026 &middot; 5 fresh, practical AI-automation updates</p>
+
+  <p>This week the theme is unmistakable: agents are getting <strong>cheaper to run</strong> and <strong>easier to own</strong>. From a fully open-source self-hosted coding agent to a tiny decision model that cut one company's bill by 97%, the wins below are about money and time &mdash; not benchmarks.</p>
+
+  <h2>1. DeepSeek Super-Agent goes open-source (and free to self-host)</h2>
+  <p><span class="tag">Open-source &middot; Cost</span></p>
+  <p>Released November 1 under the MIT license as <code>dsh-superagent-prototype</code>, DeepSeek's Super-Agent watches developer group chats and proactively opens draft PRs &mdash; an OS-inspired Router coordinates ephemeral Worker nodes in isolated worktrees. Because it runs on DeepSeek's open weights on your own infrastructure, marginal cost per suggestion approaches zero. DeepSeek estimates its MoE architecture runs <strong>up to 80% cheaper</strong> than proprietary per-token coding tools like Claude Code.</p>
+
+  <h2>2. Ragic cuts AI classification cost 97&ndash;98% with auto-routed tiny models</h2>
+  <p><span class="tag">Money-saver</span></p>
+  <p>Cloud database platform Ragic (Nov 5) now auto-selects TypeSafe AI's <strong>Jev</strong> decision model for qualifying classification tasks instead of a general-purpose LLM. No code, no manual model picking. One customer's tracking agent had burned ~$200/month on Gemini Flash across 10,000+ runs; routing those decisions to Jev drops the same workload to well under $1/month. The lesson scales to any repetitive tagging, triage, or routing automation.</p>
+
+  <h2>3. Claude Code slashes background-subagent token use up to 63%</h2>
+  <p><span class="tag">Claude &middot; Cost</span></p>
+  <p>Anthropic's November 5&ndash;6 update batches background tasks and compresses repeated codebase context with <strong>CodeDict</strong>, cutting token quota usage by as much as 63%. Field reports put continuous background CRM checks and webhook monitoring at under ~&#8369;250/month (roughly $4) in raw API cost &mdash; turning "always-on agents" from a budget fear into a rounding error.</p>
+
+  <h2>4. AWS prompt caching for OpenAI models on Bedrock trims agent loops</h2>
+  <p><span class="tag">AWS &middot; Cost</span></p>
+  <p>Agents routinely resend the same background context on every step, which quietly multiplies both cost and latency. AWS published a prompt-caching pattern for OpenAI models on Amazon Bedrock that stops the resend waste &mdash; a single lever that pays off the moment an agent runs more than a handful of steps per task.</p>
+
+  <h2>5. xAI launches Shared Bots to automate the sales deal cycle</h2>
+  <p><span class="tag">Sales &middot; Time</span></p>
+  <p>xAI shipped <strong>Shared Bots for sales</strong>: three named teammates &mdash; Account Intel Bot, Quote Bot, and Deal Bot &mdash; that research accounts, prepare quotes, and track deals across a whole team. Packaging agents as shared "teammates" turns the deal cycle into background automation instead of manual rep work.</p>
+
+  <div class="tip">
+    <h2>Automation tip of the day</h2>
+    <p>Route every repetitive classification, extraction, or routing step to the <strong>smallest viable model</strong> &mdash; or a purpose-built decision model like Jev &mdash; and switch on prompt caching wherever an agent resends the same context. Combined, real teams report <strong>63&ndash;98% cost cuts with zero quality loss</strong> on easy steps. Add a per-run token budget and a kill switch so a runaway loop can never silently drain the bill.</p>
+  </div>
+
+  <hr>
+  <div class="sponsor" style="margin-top:8px">
+    <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+    <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+    <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+  </div>
+  <p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</div>
+</body>
+</html>
