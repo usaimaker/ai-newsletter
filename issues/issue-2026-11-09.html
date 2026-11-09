@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Nexus Daily - Issue 2026-11-09: Cheaper Agents, Safer Hooks, Zero-Hosting Deploys</title>
+<style>
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1a1a1a;line-height:1.6}
+h1{font-size:30px;line-height:1.25;margin-bottom:6px}
+h2{font-size:22px;margin-top:34px;border-left:4px solid #4f46e5;padding-left:10px}
+.date{color:#666;font-size:14px;margin-bottom:28px}
+.tip{background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:16px 18px;margin:28px 0}
+.tip strong{color:#3730a3}
+.sponsor{background:#0f172a;color:#e2e8f0;border-radius:12px;padding:20px;margin-top:36px}
+.sponsor a{color:#93c5fd;text-decoration:none}
+.sponsor a:hover{text-decoration:underline}
+.meta{font-size:13px;color:#94a3b8;margin-top:10px}
+.tag{display:inline-block;background:#4f46e5;color:#fff;font-size:12px;padding:2px 8px;border-radius:20px;margin-right:6px}
+</style>
+</head>
+<body>
+<h1>AI Nexus Daily - Cheaper Agents, Safer Hooks, Zero-Hosting Deploys</h1>
+<div class="date">Issue 2026-11-09 &middot; Practical AI-automation news that saves you money and time</div>
+
+<p>Five fresh moves from the first week of November 2026 that directly cut your AI bills or your to-do list. No hype - just what changed and what to do about it.</p>
+
+<h2><span class="tag">FREE</span>Cognition SWE-2 Flash: 3x faster, one-fifth the price</h2>
+<p>Announced November 4, <strong>SWE-2 Flash</strong> is the cheaper, quicker sibling of SWE-2, tuned for routine agent grunt work: automations, code review, documentation updates and small feature builds. Cognition reports roughly <strong>3x the speed at ~1/5 the cost</strong>, and it is <strong>free to use through November 30, 2026</strong> inside Devin Desktop and the CLI. It is not a benchmark leader - it is a cost-and-speed alternative you should route your boring jobs to now while it is free.</p>
+
+<h2><span class="tag">-74%</span>OpenRouter Auto Code: Opus 5.5 quality at a fraction of the cost</h2>
+<p>Shipped November 6, <strong>openrouter/auto-code</strong> is a coding-focused router that vendor benchmarks say matches <strong>Claude Opus 5.5</strong> across five coding benchmarks at about <strong>74% lower cost per task</strong>. Routing p90 latency dropped to ~0.65s (was ~1.96s). There is <strong>no routing surcharge</strong> - you pay only the served model's list price. Set your model to <code>openrouter/auto-code</code> and let it pick the cheapest model that still clears the bar. For agent loops running thousands of turns, that compounds fast.</p>
+
+<h2><span class="tag">TIME</span>Cursor cloud agents: scaffold, host, and ship without a hosting account</h2>
+<p>Cursor's new cloud agents (early November) can scaffold a web app, provision Postgres, wire up SSO, run security checks, and <strong>publish a shareable URL - with no separate hosting account</strong>. They also added realtime two-way voice chat across the Agents Window, IDE, web and iOS. If you were paying for a Vercel/ Render seat just to demo internal tools, the build-to-deploy loop just absorbed that bill.</p>
+
+<h2><span class="tag">SAFETY</span>Anthropic policy hooks are now GA: gate tool calls before they fire</h2>
+<p>Prompt hooks and <strong>pre-tool-call hooks</strong> for Claude Enterprise are generally available. They let your security and DLP tooling inspect the prompt and the proposed action <em>before</em> an agent touches anything - exactly the guardrail class that stops agents from leaking data or rewriting system files (the kind of failure that made headlines this month). If you run agents on real infrastructure, this is the cheapest insurance you can buy: block the bad call, don't audit it after.</p>
+
+<h2><span class="tag">SECURITY</span>Claude Code Cloud Sessions configure themselves and keep keys out of the model</h2>
+<p>New in early November: Claude Code Cloud Sessions on Pro, Max and Ultra <strong>detect dependencies, network access and API keys themselves</strong>, persist the environment, and store keys where the model never sees them. Translation - less hand-wired setup per project and one fewer place your secrets can leak into a prompt. Pair it with the hooks above and your agent stack gets both convenient and locked-down.</p>
+
+<div class="tip">
+<strong>Automation tip of the day:</strong> Build a "model ladder" for every agent loop. Route routine steps (review, doc updates, classification) to the cheapest model that clears the quality bar - SWE-2 Flash or OpenRouter Auto Code - and reserve the frontier model for the hard 10%. Add a per-run token budget and a hard kill switch, and cache proven workflows so you never re-pay for the same context. Cheap model + cache + kill switch is the difference between an automation that scales and one that quietly burns your budget.
+</div>
+
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+</body>
+</html>
