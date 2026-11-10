@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Nexus Daily - Cheap Executors, Cheaper Research, Sales Bots (2026-11-10)</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:32px auto;padding:0 18px;color:#1a1a1a;line-height:1.7}
+h1{font-size:26px;margin-bottom:6px}
+h2{font-size:20px;margin-top:32px;border-bottom:2px solid #eef2ff;padding-bottom:6px}
+.date{color:#666;font-size:14px;margin-bottom:28px}
+.tip{background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:16px 18px;margin:28px 0}
+.tip strong{color:#3730a3}
+.sponsor{background:#0f172a;color:#e2e8f0;border-radius:12px;padding:20px;margin-top:36px}
+.sponsor a{color:#93c5fd;text-decoration:none}
+.sponsor a:hover{text-decoration:underline}
+.meta{font-size:13px;color:#94a3b8;margin-top:10px}
+.tag{display:inline-block;background:#4f46e5;color:#fff;font-size:12px;padding:2px 8px;border-radius:20px;margin-right:6px}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>AI Nexus Daily - Cheap Executors, Cheaper Research, Sales Bots</h1>
+<div class="date">Issue 2026-11-10 &middot; Practical AI-automation news that saves you money and time</div>
+
+<p>Five fresh moves from early November 2026 that directly cut your AI bills or your to-do list. No hype - just what changed and what to do about it.</p>
+
+<h2><span class="tag">$0.10/M</span>Meta Muse Ember: a $0.10-per-million executor for your agent herd</h2>
+<p>Launched November 9, <strong>Muse Ember</strong> is Meta's lightest model and its first built specifically as an <strong>agent execution layer</strong>. Priced at <strong>$0.10 / $0.50 per million</strong> in/out (cached input just $0.004/M) with a 1M-token context and multimodal input (text, images, audio, video), it is designed to do the repetitive volume work - tool calls, routing, document extraction, small code fixes - while a bigger model plans. Meta's demo ported 16 Python to Rust lexers in parallel for about <strong>$3.96 total</strong>. Route your high-frequency agent steps here instead of a frontier model and the savings compound across every run.</p>
+
+<h2><span class="tag">-90%</span>Perplexity Agent API: cheaper research, new ultra tier</h2>
+<p>Announced November 5, <strong>every effort level</strong> in Perplexity's Agent API now costs less per query with equal or better quality. The headline: <strong>medium</strong> jumped from 55% to 77% on BrowseComp/DSQA while its cost fell <strong>almost 90%</strong>; <strong>xhigh</strong> runs at about 25% of its August price. A new <strong>ultra</strong> tier fans one research problem across three parallel agents plus a consolidator (85.9% WANDR at $21.71/task). If you run agentic research or data-collection loops, repoint them at the lower tiers and let the budget caps stop runaway tool-call chains.</p>
+
+<h2><span class="tag">TIME</span>AWS prompt caching for OpenAI on Bedrock trims agent loops</h2>
+<p>AWS published guidance for <strong>prompt caching on OpenAI models running on Amazon Bedrock</strong>. Agent loops resend the same system prompt and background context on every step, which silently balloons cost and latency. Caching that static context means each turn pays for only the new tokens. If your agents repeat long instructions or large knowledge blobs every call, turn on caching and watch both bill and wait time drop on long-running automations.</p>
+
+<h2><span class="tag">BROWSER</span>LangChain Managed Deep Agents v0.10: browser use + background subagents</h2>
+<p>LangChain shipped <strong>Managed Deep Agents v0.10</strong> with two practical additions: <strong>browser use</strong> (so an agent can drive sites with no API) and <strong>async background subagents</strong> (a main agent hands off long jobs and keeps moving instead of blocking). That means one orchestrator can now watch a site, kick off research in the background, and return to the user faster - less waiting, fewer wasted cycles, and broader task coverage without writing custom scrapers.</p>
+
+<h2><span class="tag">SALES</span>xAI Shared Bots: three bots that run your deal cycle</h2>
+<p>xAI introduced <strong>Shared Bots for sales teams</strong> - <strong>Account Intel Bot</strong>, <strong>Quote Bot</strong>, and <strong>Deal Bot</strong> - that automate parts of the deal cycle: researching an account, preparing quotes, and tracking deals across the whole team. Instead of stitching separate prompts and CRMs, a shared bot handles the busywork so reps spend time closing. Point it at your pipeline and let the repetitive research-and-quote steps run themselves.</p>
+
+<div class="tip">
+<strong>Automation tip of the day:</strong> Split your stack into a planner plus a herd of cheap executors. Muse Ember, Perplexity's cheaper tiers, and Bedrock prompt caching all reward routing repetitive steps - tool calls, extraction, classification - to the smallest model that still clears the bar. Keep one strong model for planning, run the volume on $0.10/M workers, and set a <strong>hard per-run budget and kill switch</strong> so a loop can never run away.
+</div>
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+</body>
+</html>
