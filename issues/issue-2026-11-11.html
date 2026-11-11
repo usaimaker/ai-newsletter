@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Nexus Daily - Fable OS, Kill Switches &amp; Cheaper Sandboxes (2026-11-11)</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 18px;color:#1e293b;line-height:1.65}
+h1{font-size:28px;margin-bottom:6px}
+h2{font-size:20px;margin-top:34px;border-bottom:2px solid #e2e8f0;padding-bottom:6px}
+.date{color:#666;font-size:14px;margin-bottom:28px}
+.tip{background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:16px 18px;margin:28px 0}
+.tip strong{color:#3730a3}
+.sponsor{background:#0f172a;color:#e2e8f0;border-radius:12px;padding:20px;margin-top:36px}
+.sponsor a{color:#93c5fd;text-decoration:none}
+.sponsor a:hover{text-decoration:underline}
+.meta{font-size:13px;color:#94a3b8;margin-top:10px}
+.tag{display:inline-block;background:#4f46e5;color:#fff;font-size:12px;padding:2px 8px;border-radius:20px;margin-right:6px}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>AI Nexus Daily - Fable OS, Kill Switches &amp; Cheaper Sandboxes</h1>
+<div class="date">Issue 2026-11-11 &middot; Practical AI-automation news that saves you money and time</div>
+
+<p>Five fresh moves from the first half of November 2026 that cut your AI bills or your to-do list. No hype - just what changed and what to do about it.</p>
+
+<h2><span class="tag">1,000+ agents</span>Anthropic Fable 5.2 &amp; Mythos 5.2: a swarm that built a working OS in 8 days</h2>
+<p>Released November 9, <strong>Claude Fable 5.2</strong> coordinated <strong>over 1,000 AI agents</strong> to build a bootable operating system - kernel, drivers, file saving, a window display and a login screen - from an empty folder in eight days. It also converted Fermat's Last Theorem into a computer-verifiable proof in ~30 hours using 1,000 agents. Pricing dropped: input fell from <strong>$10 to $8</strong> per million and output from <strong>$50 to $40</strong>, with responses up to 30% faster. <strong>Mythos 5.2</strong> lifts restrictions but is gated behind an org review. <em>Takeaway:</em> for big, parallelizable builds, orchestration beats a single giant model - and the per-token price is falling fast.</p>
+
+<h2><span class="tag">Safety</span>CrowdStrike ships a kill switch for runaway agents</h2>
+<p>CrowdStrike introduced a control that lets security teams <strong>shut down a misbehaving agent, block it from restarting, and cut its network access</strong> - with the human still holding the decision. The move reflects a broader shift: as agents gain autonomy (sending emails, moving money, writing code), the differentiator is not just capability but a <strong>reliable off-switch</strong>. <em>Takeaway:</em> before you let an agent touch production, wire in a kill switch and an approval gate for high-impact actions.</p>
+
+<h2><span class="tag">Self-host</span>Rerun: natural-language co-workers you run on your own subscription</h2>
+<p><strong>Rerun</strong> (AGPL-3.0, 600+ stars) lets you describe a co-worker in plain language; each gets its own memory and runtime, a <strong>Foreman</strong> teams them up, and they plug into <strong>200+ tools</strong>. Crucially, it reuses your existing <strong>Claude or ChatGPT subscription or API key</strong> instead of billing you twice. <em>Takeaway:</em> a fast, near-free way to stand up persistent assistants without a new monthly SaaS bill.</p>
+
+<h2><span class="tag">$4.76/mo</span>Agent37: a persistent sandbox for 1/25th the price of Vercel</h2>
+<p><strong>Agent37</strong> offers a 2 vCPU / 4 GB persistent sandbox for <strong>$4.76/month</strong> (gVisor isolation, runs Claude Code, Codex, OpenCode, Hermes or your own image) - versus roughly $249 on Vercel, $145 on Cloudflare and $121 on Daytona. <em>Takeaway:</em> if your agents need a long-lived, isolated environment, the sandbox line item is now a place you can save real money.</p>
+
+<h2><span class="tag">Router</span>Weave Router picks the cheapest model per task - and audits your AI spend</h2>
+<p><strong>Weave</strong> raised a $13.5M Series A to compare human vs agent output and your AI spend, and shipped the <strong>Weave Router</strong>, which selects the right model per task. <em>Takeaway:</em> a per-task router is the single highest-leverage cost control - stop sending every call to the most expensive model.</p>
+
+<div class="tip">
+<strong>Automation tip of the day:</strong> Build a three-layer defense for every agent you deploy: (1) a <strong>model ladder</strong> - route bulk execution to the cheapest model (Ember at $0.10/$0.50, Haiku 5.5, or your own self-hosted instance) and reserve frontier models for planning; (2) a <strong>kill switch</strong> with an approval gate on high-impact actions, exactly like CrowdStrike's off-switch; (3) <strong>prompt/context caching</strong> so repeated calls don't re-pay for the same context. Pair the ladder with a per-task router (Weave-style) and your blended cost drops while quality holds.
+</div>
+
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+</body>
+</html>
