@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Nexus Daily - Issue 2026-11-12: Cheap models & local crews</title>
+<style>
+  body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:0 auto;padding:28px;color:#1a1a2e;line-height:1.65;}
+  h1{font-size:30px;margin:0 0 6px;} .sub{color:#6b7280;font-size:14px;margin-bottom:22px;}
+  h2{font-size:21px;margin:30px 0 8px;border-left:4px solid #6366f1;padding-left:10px;}
+  .tag{display:inline-block;background:#eef2ff;color:#4338ca;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:6px;text-transform:uppercase;letter-spacing:.04em;}
+  p{margin:8px 0;} strong{color:#111827;}
+  .tip{background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:14px 16px;margin:26px 0;}
+  .sponsor{background:#111827;color:#e5e7eb;border-radius:14px;padding:20px 22px;margin:28px 0;}
+  .sponsor a{color:#a5b4fc;} .sponsor .meta{color:#9aa0aa;font-size:13px;}
+  .nl-promo{margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial}
+  .footer{font-size:12px;color:#9aa0aa;margin-top:18px;}
+</style>
+</head>
+<body>
+<h1>AI Nexus Daily &mdash; November 12, 2026</h1>
+<p class="sub">Practical AI-automation news that saves you time and money. No hype, just what ships and what it costs.</p>
+
+<p>This week the story is clear: the execution tier of AI just got dramatically cheaper, and open tooling is removing lock-in. Here are five findings worth acting on today.</p>
+
+<h2><span class="tag">Model</span>Meta Muse Ember: a $0.10/$0.50 execution model that costs ~1/3 per task of Haiku 5.5</h2>
+<p>Released Nov 9, <strong>Muse Ember</strong> is Meta's smallest, most efficient model, built for the repetitive steps agents take all day &mdash; tool calls, routing, data extraction, long-document parsing. It lists at $0.10 in / $0.50 out per million tokens (same as Haiku 5.5 and GPT-6 Luna) but Meta claims it hits Haiku 5.5's benchmark score at roughly a third of the cost per finished task, thanks to cheaper cached input ($0.004 vs $0.01) and a 200K-token threshold before rates step up (Haiku steps up at 100K). It carries a 1M-token context and reads text, images, audio and video. The pattern to copy: <em>"Muse Wonder plans, Muse Ember handles the volume"</em> &mdash; one frontier model for reasoning, a cheap model for the thousands of small steps.</p>
+
+<h2><span class="tag">Cheapest</span>Amazon Nova Micro is now the cheapest model per task for classification, support and RAG</h2>
+<p>Verified Nov 4&ndash;10 across published list prices, <strong>Nova Micro</strong> wins the per-month cost race for the high-volume workloads automations actually run: high-volume classification (~$2.03/mo), customer-support chat (~$5.77/mo) and RAG answers (~$3.50/mo) &mdash; all below Nova Lite, Qwen Flash and Claude Haiku 5.5. At $0.035 in / $0.14 out per million tokens, it is the right default for routing, tagging and extraction loops where quality is "good enough" and volume is brutal. Rule of thumb: send the boring 90% of calls to the cheapest model that passes your eval.</p>
+
+<h2><span class="tag">Open-weight</span>GLM 4.7 Flash: $0.06/$0.40, open-weight and tool-call capable</h2>
+<p>Pricing verified Nov 8, <strong>GLM 4.7 Flash</strong> (Z.ai) is the cheapest <em>capable</em> automation model at $0.06 in / $0.40 out per million tokens &mdash; about $1.40/month at 10M input + 2M output tokens. It is open-weight with working tool calls, so you can start on a hosted API and move to your own GPUs later without rewriting prompts. For classification, extraction and routing at scale, it undercuts every proprietary option. Keep a hosted fallback, but the open-weight path means your bill can trend toward zero as you self-host.</p>
+
+<h2><span class="tag">Open source</span>Friday lets you run Claude Code and Codex as a local crew &mdash; no vendor lock-in</h2>
+<p>Released Nov 1, <strong>Friday</strong> (github.com/splashxmoon/friday) is an open-source orchestration layer that runs Claude Code and Codex as collaborative crews on your own machine. You assign specialized roles &mdash; one agent for schema/architecture, another for boilerplate/UI, a third for tests &mdash; and Friday handles inter-agent messaging, shared context and task handoffs. It runs entirely local (only the model API calls leave your box), is config-driven, and supports custom roles. Takeaway: multi-agent orchestration no longer requires a paid cloud control plane; wire your own crew and keep full control of the workflow.</p>
+
+<h2><span class="tag">Scale</span>Anthropic Fable 5.2 / Mythos 5.2: 1,000+ sub-agents built a bootable OS in 8 days &mdash; and got cheaper</h2>
+<p>Released Nov 9, <strong>Fable 5.2</strong> coordinated over 1,000 sub-agents to build a working OS from an empty folder in eight days (kernel, drivers, file save, window display, login), and converted Fermat's Last Theorem into a computer-verifiable form in ~30 hours. Pricing dropped: input $10&rarr;$8 and output $50&rarr;$40 per million, with up to 30% faster responses. Mythos 5.2 lifts restrictions for reviewed orgs. The lesson for builders: the orchestrator-plus-specialist-herd pattern is now proven at extreme scale &mdash; design your agents as one planner fanning out to many cheap workers.</p>
+
+<div class="tip">
+<strong>Automation tip of the day:</strong> Build a four-layer cost defense for every agent you ship. (1) <strong>Model ladder</strong> &mdash; route bulk execution (routing, extraction, classification) to the cheapest model that passes your eval: Nova Micro ($0.035/$0.14), GLM 4.7 Flash ($0.06/$0.40) or Muse Ember ($0.10/$0.50) &mdash; and reserve frontier models for planning only. (2) <strong>Prompt/context caching</strong> so repeated calls don't re-pay for the same context (Ember's $0.004 cached input is 2.5x cheaper than Haiku's). (3) A <strong>per-task router</strong> (Weave-style) that auto-picks the right model per call. (4) A <strong>kill switch</strong> with an approval gate on high-impact actions. Blend the ladder with a router and your cost drops while quality holds.
+</div>
+
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+</body>
+</html>
