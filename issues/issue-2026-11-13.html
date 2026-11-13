@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Nexus Daily - Issue 2026-11-13: The $0.10 Agent Layer Arrives</title>
+<style>
+  body{margin:0;background:#0b0b14;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.65}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 60px}
+  h1{font-size:30px;line-height:1.2;margin:0 0 6px;color:#fff}
+  .date{color:#a78bfa;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px}
+  h2{font-size:21px;color:#fff;margin:34px 0 8px;border-left:4px solid #7c3aed;padding-left:12px}
+  p{margin:10px 0}
+  a{color:#34d399}
+  .lead{font-size:16px;color:#cbd5e1}
+  .tag{display:inline-block;background:#1e1b3a;color:#a78bfa;border-radius:6px;padding:2px 8px;font-size:11px;margin-right:6px}
+  .tip{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:18px 20px;margin:28px 0}
+  .tip h2{border:none;padding:0;margin:0 0 8px;color:#fbbf24}
+  .sponsor{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:18px 20px;margin:28px 0}
+  .sponsor strong{color:#fff;font-size:18px}
+  .nl-promo{margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial}
+  .footer{font-size:12px;color:#64748b;margin-top:24px}
+  .meta{font-size:13px;color:#94a3b8}
+  ul{margin:10px 0}
+  li{margin:6px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Nexus Daily</h1>
+<div class="date">Issue 2026-11-13 - Friday</div>
+<p class="lead">This week the agent stack finally split into roles with real price tags. The headline: you can now run the repetitive 95 percent of agent work on a model that costs a tenth of a cent per million tokens - and keep the expensive frontier model only for the steps that actually need it.</p>
+
+<h2><span class="tag">CHEAP EXECUTOR</span>Meta Muse Ember: a $0.10/M worker for the boring 95 percent</h2>
+<p>Meta launched <strong>Muse Ember</strong> on November 9 as the execution layer of its Muse family - priced at <strong>$0.10 per million input</strong> and <strong>$0.50 per million output</strong> tokens, with cached input at just <strong>$0.004</strong>. That is roughly 1/80th the per-token price of Anthropic Fable 5.2 and about a third of the cost-per-task of Claude Haiku 5.5 on the Artificial Analysis index.</p>
+<p>Ember is built for the steps an agent repeats hundreds of times a day: tool calls, routing, data extraction, test runs, and long-document parsing. Meta demoed porting 16 code lexers from Python to Rust - Wonder planned, 16 Ember agents ran in parallel - for about <strong>$3.96 total</strong>, with $1.84 of that Ember. Early partners (Cloudflare, You.com) report 30 percent faster tail latency and 36 to 48 percent fewer output tokens than the model they replaced.</p>
+<p><strong>Money move:</strong> route every high-volume, low-complexity agent step to Ember instead of your flagship. Keep a stronger model for planning only.</p>
+
+<h2><span class="tag">FRONTIER</span>Gemini 4 Carbon goes GA - and brings /swarm</h2>
+<p>Google made <strong>Gemini 4 Carbon</strong> generally available on November 10 at an introductory <strong>$2/$10 per million tokens</strong> (doubles to $4/$20 after November 30). It tops the Artificial Analysis index and leads on security work, though it trails Claude Opus 5.5 on desktop computer use.</p>
+<p>The bigger automation story is <strong>/swarm</strong> in Google Antigravity: one prompt spins up a coordinated team of agents with isolated parallel workspaces, role assignment, and adversarial verifiers that test each change. That is orchestration as a first-class feature, not something you hand-wire yourself.</p>
+<p><strong>Money move:</strong> Carbon intro rate is half of most flagships through month-end - a cheap window for long-horizon reasoning jobs before the price lift.</p>
+
+<h2><span class="tag">FREE OUTPUT</span>Gemini Decisions API: pay $0 for output on classification</h2>
+<p>Google shipped the <strong>Gemini Decisions API</strong> on November 11, powered by the new Gemini Decision 1 model. One request takes one input and up to <strong>1,000 independent yes/no or closed-set questions</strong>, priced at <strong>$0.10 per million input tokens and $0 for output tokens</strong>. Google says that is nearly 5x cheaper than Gemini 3.5 Flash-Lite on its benchmark suite.</p>
+<p><strong>Money move:</strong> any workflow that ends in a routing or classification decision - triage, tagging, intent detection - can offload that step here and pay nothing for the answer tokens.</p>
+
+<h2><span class="tag">GOVERNED</span>Databricks Genie: an autonomous coworker with a spending cap</h2>
+<p>Databricks launched the new <strong>Genie</strong> on November 11: an agent that takes long-running jobs by email, Slack, or Teams, follows up when inputs are missing, and runs on schedules or triggers (like a dipping metric). It operates under the user own identity, sees only what that user can see, and records every action.</p>
+<p>The part procurement teams care about: admins set <strong>per-user budgets, spending caps, and alerts</strong>. Databricks reports Genie answered correctly in 91 percent of runs on a Turing-built benchmark.</p>
+<p><strong>Money move:</strong> an agent you cannot put a spending limit on will not pass a CFO. If you deploy autonomous agents, require a hard per-run budget before anything ships.</p>
+
+<h2><span class="tag">LOCAL TEST</span>AWS Emulator: test cloud code locally, written by agents</h2>
+<p>Amazon released <strong>AWS Emulator</strong> on November 11 - a local emulator of AWS services that, per Amazon, was <strong>written entirely by autonomous agents</strong>. You do not need an AWS account, and there is an <strong>aws-emulator skill for AI coding agents</strong> so your agent can test against mocked AWS services offline.</p>
+<p><strong>Time and money move:</strong> stop burning a cloud account (and its bill) to test agent-built infrastructure code. Run it locally first, free, then promote to real AWS once it passes.</p>
+
+<div class="tip">
+<h2>Automation tip of the day</h2>
+<p><strong>Build a 3-layer cost defense, not a single model.</strong> (1) <em>Model ladder</em> - plan with a frontier model, execute the boring 95 percent on the cheapest worker (Ember at $0.10/M, or the Decisions API at $0 output). (2) <em>Prompt cache</em> - cache stable system prompts and repo context so repeats cost a fraction. (3) <em>Hard budget cap</em> - like Databricks Genie, set a per-run dollar ceiling and a kill switch so a runaway loop cannot quietly drain the account. Most agent overspend is one forgotten loop, not one expensive call.</p>
+</div>
+
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+</div>
+</body>
+</html>
