@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Automation Daily - Issue 2026-11-14</title>
+<style>
+body{max-width:760px;margin:0 auto;padding:24px 18px;font-family:system-ui,Arial;background:#0b0b14;color:#e5e7eb;line-height:1.65}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px;color:#fff}
+h2{font-size:21px;margin:30px 0 8px;color:#a78bfa;border-bottom:1px solid #2a2a40;padding-bottom:6px}
+.date{color:#9ca3af;font-size:13px;margin-bottom:24px}
+p{margin:10px 0}
+a{color:#34d399}
+.tip{background:#101826;border:1px solid #1e3a5f;border-left:4px solid #38bdf8;border-radius:8px;padding:14px 18px;margin:28px 0}
+.sponsor{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:18px 20px;margin:28px 0}
+.sponsor strong{color:#fff;font-size:18px}
+.nl-promo{margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial}
+.footer{color:#6b7280;font-size:13px;margin-top:30px}
+.meta{color:#9ca3af;font-size:13px}
+</style>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-11-14 &middot; Practical AI tools that save money and time</div>
+
+<p>Five fresh moves this week that cut AI spend or reclaim hours &mdash; all from real November 2026 launches.</p>
+
+<h2>1. GLM 4.7 Flash: the cheapest capable automation model</h2>
+<p>Z.AI's GLM 4.7 Flash lists at <strong>$0.06 in / $0.40 out per million tokens</strong> &mdash; roughly half the cost of Claude Haiku 5.5 or GPT-6 Luna for the same short-prompt work, and it is open-weight with tool-calling support. For the high-volume steps that dominate any agent bill &mdash; classification, field extraction, routing &mdash; this is now the default to test first. You can start on the hosted API and later self-host the weights with no prompt changes.</p>
+
+<h2>2. Anthropic Message Threads beta (Nov 2): 35% faster on long sessions</h2>
+<p>Agents that keep a 500K&ndash;1M token thread no longer re-send the whole conversation every turn. Send the full context once, then ship only new messages plus the previous response ID. Anthropic reports <strong>median time-to-first-token down ~35%</strong> on long sessions, and it is already on for most Claude Code users. Note: it saves wall-clock time, not tokens &mdash; pricing and rate limits are unchanged.</p>
+
+<h2>3. Snowflake CoCo / CoWork Bots + Cortex AI Gateway (Nov 3)</h2>
+<p>Snowflake shipped background bots that plan and execute with <em>your</em> exact access rights, surfacing only for a decision or sign-off. Paired with the Cortex AI Gateway (public preview) you get one set of access policies for every model and MCP tool an agent calls, plus audit trails and <strong>cost caps</strong>. The pattern to copy: a single governed gateway beats per-agent keys for controlling runaway spend.</p>
+
+<h2>4. n8n Nod (Nov 10): a local agent with spending limits</h2>
+<p>Nod is an open-source research preview that runs on your own Mac, PC, or server with its own browser and sandbox. It works across Gmail, Calendar, Drive, Slack and arbitrary websites, runs jobs in parallel, and &mdash; crucially &mdash; ships <strong>approval checks, activity logs, cost receipts, and spending limits</strong>. Running the agent on hardware you already own removes cloud-orchestration fees entirely.</p>
+
+<h2>5. Perplexity Teammates (Nov 7): agents that own a recurring job</h2>
+<p>Instead of one prompt, one answer, a Teammate takes a named role with its own memory, browser, and code environment, then keeps working after the conversation ends &mdash; monitoring for changes and returning completed work for review. A sales teammate that notices a lapsed customer and drafts a win-back offer is the clearest time-saver: the recurring grind now runs itself.</p>
+
+<div class="tip">
+<strong>Automation tip of the day:</strong> Stop letting every agent step hit a flagship model. Route the repetitive 90% &mdash; parsing, routing, extraction &mdash; to the cheapest capable model (GLM 4.7 Flash at $0.06/$0.40), keep a frontier model only for planning. Then wrap every run with a <strong>hard per-run budget cap and a kill switch</strong> so a stuck loop can't quietly burn the monthly allowance. Cheapest executor + budget ceiling = predictable $0-style automation.
+</div>
+
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+</div>
+</body>
+</html>
