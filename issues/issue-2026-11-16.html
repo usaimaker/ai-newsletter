@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - November 16, 2026: Cheap Agents, Local Helpers and a $97 Fine-Tune</title>
+<style>
+body{max-width:760px;margin:0 auto;padding:24px;background:#0b0b12;color:#e5e7eb;font-family:system-ui,Arial,line-height:1.65}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px;color:#fff}
+h2{font-size:21px;margin:30px 0 8px;color:#a78bfa;border-bottom:1px solid #2a2a40;padding-bottom:6px}
+.date{color:#9ca3af;font-size:13px;margin-bottom:24px}
+p{margin:10px 0}
+a{color:#34d399}
+.tip{background:#101826;border:1px solid #1e3a5f;border-left:4px solid #38bdf8;border-radius:8px;padding:14px 18px;margin:28px 0}
+.sponsor{background:#0f1020;border:1px solid #2a2a40;border-radius:12px;padding:18px 20px;margin:28px 0}
+.sponsor strong{color:#fff;font-size:18px}
+.nl-promo{margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial}
+.footer{color:#6b7280;font-size:13px;margin-top:30px}
+.meta{color:#9ca3af;font-size:13px}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>AI Automation Daily</h1>
+<div class="date">Issue 2026-11-16 &middot; Practical AI tools that save money and time</div>
+
+<p>Five fresh, real findings from November 10&ndash;16, 2026 &mdash; cheaper agent models, a free local agent, and hard numbers on what a small model can replace.</p>
+
+<h2>1. GLM 5.3 is now the cheapest strong agent model (Nov 16 leaderboard)</h2>
+<p>The November 16 Agents leaderboard puts open-weight <strong>GLM 5.3 at 53.1 points</strong> &mdash; within five points of the $10/$50-per-million leader Claude Fable 5.1 &mdash; at just <strong>$0.07 input / $1.40 output per million</strong>. Its Flash sibling, GLM 5.3 Flash, is $0.04/$0.078. At a typical 1M input + 250K output tokens a month, that is about <strong>$0.42</strong> instead of tens of dollars for the same class of agent work. The takeaway: route bulk agent steps to an open-weight model and keep the flagship only for the hard planning calls.</p>
+
+<h2>2. Revolut cut AI coding cost ~90% by self-hosting open models (reported Nov 16)</h2>
+<p>A November 16 industry report details how fintech Revolut replaced OpenAI and Anthropic coding assistants with self-hosted Zhipu GLM for roughly <strong>2,000 engineers</strong>, running on 56 B200 GPUs. Average coding time fell about <strong>60%</strong>, AI spend dropped close to <strong>90%</strong>, and blended inference cost landed near <strong>$0.30 per million tokens</strong> &mdash; about a tenth of the prior bill. This is the clearest real-world proof yet that cost-sensitive, high-volume agent work (coding, batch processing, terminal automation) is moving to open weights.</p>
+
+<h2>3. n8n ships Nod: a free, open-source agent that runs on your computer (Nov 10)</h2>
+<p>n8n Labs released <strong>Nod</strong>, a research-preview personal agent under Apache 2.0. It has its own sandboxed browser, works in connected apps and on sites with no integration, and handles recurring admin &mdash; chasing invoices, downloading statements, cancelling trials, pulling dashboard numbers into a report. It scored <strong>93.2% on LongMemEval</strong> for long-term memory. Cost controls are baked in: <strong>a receipt for every task, a monthly spending cap, and a check-in once a task passes $5</strong>. The app is free; you only pay your model provider, or connect a free local model.</p>
+
+<h2>4. A $97 fine-tune made a 27B open model beat Sonnet at one-sixth the cost (Nov 16)</h2>
+<p>Ops company Komodor pointed its self-improving loop at the model itself. Using Qwen3.5-27B's own investigation sessions, a teacher model corrected the first wrong turn and only higher-scoring runs were kept. Four LoRA jobs on Together AI cost <strong>$27; the whole cycle cost $97</strong>. On 40 Kubernetes root-cause tasks the score jumped from <strong>0.287 to 0.871</strong> at <strong>$0.14 per run versus $0.84 for Sonnet 4.6</strong>. Caveat worth copying: it was trained and scored on the same incidents, so unseen cases are the real test. The lesson &mdash; harness and model are one optimization problem, and a frontier model's best job is often writing the data a small model learns from.</p>
+
+<h2>5. Pixeltree: a 19 MB local model that turns screenshots into UI text (Nov 16)</h2>
+<p>Developer SentimentalK229 released <strong>Pixeltree</strong>, a 19 MB local model that converts any screenshot into a text list of UI elements. Opus labelled 2,782 screenshots under one convention, a small YOLO model was fine-tuned, and it reached <strong>F1 0.854 on ten Linux apps it had never seen</strong>. Cheap models benefit most: GLM 5.3 Flash gained <strong>15 points</strong>, and a text-only model completed <strong>33 of 48 desktop tasks</strong> through it. Code, weights and the labelling recipe are public. If your agents burn tokens on screenshots, a small local "screen-to-text" front end is now a viable, free accelerator.</p>
+
+<div class="tip">
+<strong>Automation tip of the day</strong> &mdash; Build a model ladder with receipts. Route the bulk of your agent steps to a cheap open-weight model (GLM 5.3 Flash at $0.04/$0.078 per M), reserve the flagship for planning and grading, and wrap any action-taking agent in a per-task receipt, a monthly cap and an approval gate (as Nod does). Every few weeks, tune the harness and the small model together &mdash; Komodor's $97 cycle shows a narrow-task fine-tune can replace a frontier model at a sixth of the price. Test on unseen cases before you trust the number.
+</div>
+
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+
+</div>
+</body>
+</html>
