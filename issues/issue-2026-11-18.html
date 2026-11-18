@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - November 18, 2026</title>
+<style>body{background:#0b0c16;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.6;margin:0;padding:24px}.wrap{max-width:780px;margin:0 auto}h1{color:#a78bfa;font-size:28px}h2{color:#34d399;font-size:19px;margin-top:30px}a{color:#fbbf24}.tip{margin-top:28px;padding:18px 20px;border-left:4px solid #34d399;background:#121428;border-radius:8px}.sponsor{margin-top:30px;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020}.meta,.footer{font-size:12px;color:#9aa0aa}p{margin:12px 0}</style></head>
+<body><div class="wrap">
+<h1>AI Automation Daily - November 18, 2026</h1>
+<p>Today's theme: the model is no longer the product. The plumbing around it - routing, tool calls, caching and proof - is where the money is saved. Five fresh findings you can put to work this week.</p>
+<h2>1. Microsoft Decision 1.1: route small jobs to a 1/200-cost model</h2>
+<p>At Ignite 2026, Microsoft made <strong>Decision 1.1</strong> generally available: a decision model built on Google's Gemma 4 26B A4B mixture-of-experts model. Instead of writing long answers, it picks from fixed options or assigns scores - exactly what classification and routing need. Microsoft claims it is <strong>more than 10x faster</strong> than using an LLM and <strong>about 1/200 the cost</strong>. Practical move: split your agent pipeline into a decide stage and a write stage. Send triage, tagging and tool selection to a decision model, and reserve the frontier model only for work that genuinely needs prose.</p>
+<h2>2. Code mode cuts MCP tool-call tokens by 70-90%</h2>
+<p>A pre-registered study (arXiv:2611.19123, Nov 14) compared plain MCP JSON calls against <strong>code mode</strong>, where the agent writes a script against tool stubs and only the final result re-enters context. On a sealed split with up to 1,958 distractor tools, code mode used <strong>70-90% fewer tokens</strong> and improved utility for two of three open-weight agents. The surprise: declaring return-shape hints in the stubs moved success by up to <strong>39.5 points</strong> - a bigger effect than adding a router. Caveat: the test world was synthetic. Use a bounded fallback, measure latency, and never let an unbounded router retry loop run on production traffic.</p>
+<h2>3. AWS: page large JSON to S3 and cut tokens per turn by 71%</h2>
+<p>AWS described a production pattern for Bedrock AgentCore agents handling large JSON: offload results to S3 and load only the pages you need, with dictionary compression on top. Reported result: <strong>up to 71% fewer tokens per turn</strong> and <strong>up to 80% lower latency</strong>. Separately, SageMaker AI real-time endpoints now route each request to the instance holding the longest prompt-cache match, while ArisGlobal cut monthly inference spend about 40% by caching a shared prompt prefix. If your agent re-reads the same big payload every step, stop paying for it twice.</p>
+<h2>4. Gemini 4 Hydrogen + Orchestrator: cheap execution, automatic routing</h2>
+<p>Google's <strong>Gemini 4 Hydrogen</strong> (Nov 12) is built for agent execution, not deep reasoning: <strong>$1.50 / $7.50 per million tokens</strong> flat across a 1M context, cached input at $0.075, 2.5x faster than the 3.8 Flash it replaces, and 57% on Terminal-Bench 4.1 versus 18.2%. In Antigravity, <strong>Orchestrator</strong> routes each step between heavy Carbon and fast Hydrogen: near-Carbon success while using <strong>24% less quota</strong> and finishing <strong>19% faster</strong>. The lesson is model-agnostic: plan with the expensive model, execute and verify with the cheap one.</p>
+<h2>5. Genesys puts agents behind effort-based pricing</h2>
+<p>On Nov 18, Genesys launched <strong>Standalone AI Agents</strong> and <strong>Genesys Arena</strong>, letting companies add agents to existing contact-center systems in days. Arena ships 50+ industry Agent Kits that produce a working agent in as little as 10 minutes. Pricing shifts from seats and tokens to <strong>Experience Units</strong> tiered as simple, moderate or complex - you pay for the work actually done. Whether or not you buy it, the design is worth copying: scope one task, keep a human handoff with full context, and budget by task complexity rather than by seat.</p>
+<div class="tip"><strong>Automation tip of the day:</strong> Stop paying to re-think. Decide with a decision model, call tools with code mode plus return-shape hints, execute with the cheapest model that passes your tests, and page or cache any payload you read more than once. Put a per-run cap and a human approval gate on anything that spends money or changes production state.</div>
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p></div>
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body></html>
