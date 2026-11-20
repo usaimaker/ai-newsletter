@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - November 20, 2026</title>
+<style>body{background:#0b0c16;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.6;margin:0;padding:24px}.wrap{max-width:780px;margin:0 auto}h1{color:#a78bfa;font-size:28px}h2{color:#34d399;font-size:19px;margin-top:30px}a{color:#fbbf24}.tip{margin-top:28px;padding:18px 20px;border-left:4px solid #34d399;background:#121428;border-radius:8px}.sponsor{margin-top:30px;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020}.meta,.footer{font-size:12px;color:#9aa0aa}p{margin:12px 0}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body><div class="wrap">
+<h1>AI Automation Daily - November 20, 2026</h1>
+<p>Today's theme: stop paying for tool-call round trips. This week the biggest savings are not about picking a smarter model - they are about how your agents call tools, which model does the routine work, and whether cached input is priced fairly. Five fresh, practical findings you can put to work today.</p>
+<h2>1. GPT-6.2 Astra &amp; Sol: a cheaper flagship and 60% cheaper cached input</h2>
+<p>OpenAI shipped the <strong>GPT-6.2</strong> family on Nov 18. Flagship <strong>Astra</strong> targets complex professional work (documents, coding, research, 3D design) and its API <strong>input and output prices dropped 20%, cached input fell 60%</strong>. OpenAI says Astra scores 5.5 points above Claude Fable 5.2 on Agents' Last Exam at <strong>about 5% of the cost</strong>. Daily-work model <strong>Sol</strong> finished within 0.5 points of Astra on FrontierCode 2.0 while using fewer tokens for multi-step workflows. Practical move: if your agent rereads the same context, the 60% cache cut is free savings - enable prompt caching and route routine multi-step jobs to Sol instead of the flagship.</p>
+<h2>2. Claude Code "Code Mode": up to 77% fewer tokens on tool-heavy jobs</h2>
+<p>Anthropic added an experimental <strong>Code Mode</strong> in Claude Code v2.1.323 (off by default). Instead of calling tools one by one, Claude writes a short JavaScript snippet that chains the calls locally and returns only the needed results. Third-party tests show API bills down <strong>22-23%</strong> on multi-step tasks and cumulative tokens down <strong>62-77%</strong> in tool-heavy runs, with built-in tool definitions cut from 16 to 3. It needs an environment variable and runs in a local terminal. One caveat: on simple file tasks Haiku 5.5 used 9% more tokens. Practical move: turn it on for workflows with many sequential tool calls, and A/B it on a simple task first.</p>
+<h2>3. Microsoft Ignite: MAI Code 2 at 40% of the cost, Decision 1.1 at 1/79</h2>
+<p>At Ignite 2026 Microsoft released seven models built to keep always-on agents affordable. <strong>MAI Code 2</strong> reportedly reaches <strong>98% of GPT-6.1 Sol's performance at about 40% of the cost</strong>, and 96% of Claude Opus 5.5 at 5% of the cost (Microsoft's own benchmarks, promotional pricing). The new <strong>Microsoft Decision 1.1</strong> routing model is claimed to be <strong>50x faster and about 1/79 the cost</strong> of GPT-6.1 Sol on decisions. Microsoft also said over 50 million agents have been registered in Agent 365. Practical move: put a cheap decision/routing model in front of the expensive one - let it classify and route, and only call the frontier model when the job truly needs it.</p>
+<h2>4. Tencent open-sources Hy4 flash: 1/20 the cost, and you can run it locally</h2>
+<p>On Nov 16 Tencent open-sourced <strong>Hy4 flash</strong> (plus FP8 and Base versions). API pricing is <strong>¥0.5 per million input tokens and ¥2 output</strong>, with per-task cost claimed at <strong>1/20 of the standard Hy4</strong>. It is built for document processing, slide generation, deep search and everyday office work. The weights are on GitHub, Hugging Face, ModelScope and GitCode, with a GGUF build on Hugging Face for local deployment. Practical move: for high-volume, repetitive office tasks, a sub-cent model or a local GGUF run removes most of the per-token bill - and local means no data leaves your machine.</p>
+<h2>5. Perplexity Multiagent: 16 agents cross-checking one another</h2>
+<p>Perplexity launched <strong>Multiagent</strong> on Nov 17 for its Computer platform. A lead agent (Claude Fable 5.2 in the example) splits connected work across <strong>up to 16 supporting agents</strong> running Claude Opus 5.5, GPT-6.1 Sol and Gemini 4 Carbon. Unlike the earlier Ultra tier, agents <strong>share evidence and flag conflicting figures</strong> before the lead assembles one answer - aimed at annual-report review, financial forecasts and deal diligence, with a human as final reviewer. Two cautions: it is web-only for Max subscribers (about $167/month), and Perplexity published no benchmark, error-rate or per-run point-cost data. Practical move: run one past job through Multiagent and Ultra side by side and compare what each flags against your human reviewer before trusting it.</p>
+<div class="tip"><strong>Automation tip of the day:</strong> Attack the round trips, not just the model price. Use tool-chaining (Claude Code's Code Mode) so your agent stops paying for dozens of one-tool calls; put a cheap router or decision model in front of the expensive one; enable prompt caching so repeated context costs 60% less; and send high-volume, repetitive work to a sub-cent or local model. Then measure cost per completed task - that single number is the only proof your automation actually saves money.</div>
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+
+
+
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p></div>
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body></html>
