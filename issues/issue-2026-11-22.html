@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Automation Daily - November 22, 2026</title>
+<style>body{background:#0b0c16;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.6;margin:0;padding:24px}.wrap{max-width:780px;margin:0 auto}h1{color:#a78bfa;font-size:28px}h2{color:#34d399;font-size:19px;margin-top:30px}a{color:#fbbf24}.tip{margin-top:28px;padding:18px 20px;border-left:4px solid #34d399;background:#121428;border-radius:8px}.sponsor{margin-top:30px;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020}.meta,.footer{font-size:12px;color:#9aa0aa}p{margin:12px 0}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body><div class="wrap">
+<h1>AI Automation Daily - November 22, 2026</h1>
+<p>Today's theme: the price-per-task floor keeps dropping, and the savings now come from <em>where</em> you run each step, not just which model you pick. Five fresh, practical findings you can put to work this week.</p>
+<h2>1. Gemini 4 Neon makes mid-tier the permanent value champion</h2>
+<p>Google's Gemini 4 Neon (released Nov 18) is priced at $3 in / $15 out per million tokens with cached input at $0.15 - a 95% cache cut - and a 1,048,576-token context window. It runs about 110 tokens/sec versus 57 for Carbon, and by vendor numbers delivers roughly <strong>32% lower cost per task than Carbon</strong> while scoring higher on the intelligence index. It landed day-one support in Cursor, Copilot and LangChain, so switching stacks needs no integration work. Practical move: for lead qualification, invoice parsing and support triage, make Neon your default workhorse - its pricing is permanent, unlike Carbon's intro rate that doubles to $4/$20 on Dec 1. Renegotiate any inference contract priced on the old rate card.</p>
+<h2>2. GPT-6.2 Astra and Sol cut agent prices 20-60%</h2>
+<p>OpenAI shipped GPT-6.2 Astra and Sol on Nov 17. Astra added +5.2 points on Agents' Last Exam at less than one-third the price of its predecessor and +5.5 over Claude Fable 5.2 at about 5% of the cost; it lists at $8/$40 per million with cached input at $0.40 (down 60%). Sol sits at $2/$10. With three flagships landing in three days and reported price cuts of 20-600%, any pipeline still billed at old rates deserves a recalculation. Practical move: reprice your high-volume automations and route the cheap, frequent steps to Sol while reserving Astra for the few steps that truly need frontier reasoning.</p>
+<h2>3. Google hands Kubernetes-grade agent infrastructure to the CNCF - free</h2>
+<p>On Nov 20 Google donated <strong>Agent Substrate</strong>, gVisor and OpenRL to the CNCF. Google estimates agents idle 90-95% of the time just holding state; Agent Substrate splits state from compute and recovers in under 500 ms, while gVisor adds user-space kernel isolation. Practical move: you now have neutral, open-source components for resilient agent deployments without a vendor bill - a real saving for anyone running long-lived agents that currently pay for idle infrastructure. Pair this with least-privilege permissions rather than screen-scraping, which is increasingly blocked (Signal moved to block OS-agent screenshots on iOS 27 and Android in Nov).</p>
+<h2>4. Perplexity Orchestrator API: provider failover with no markup</h2>
+<p>Perplexity launched the Orchestrator API on Nov 19: one endpoint spanning OpenAI, Anthropic, Google, xAI and open-weight models, with same-model failover that swaps the provider (for example Claude to AWS Bedrock) when one goes down. Per the company, failover traffic beat every single provider on their Oct 4 - Nov 2 data, with no platform markup. Practical move: eliminate single-vendor outage risk in your automation with a single integration and one bill - especially valuable if a failed API call currently stops your whole workflow and forces a manual restart.</p>
+<h2>5. OpenVorld and the local-first shift: run a free agent crew on keys you already pay for</h2>
+<p>Launched Nov 21, <strong>OpenVorld</strong> is a local-first, MIT-licensed harness that turns a project folder into a pixel-art "vorld" where a crew of agents (Claude Code, Codex, or any OpenAI-compatible API including Ollama and LM Studio) work with named roles, hand off via @mentions, and must request a "writ" before touching a folder, command or website. No account, no subscription - you pay only your own providers. It rides a broader local-first wave: a Dev.to/Cumulus analysis puts local inference at roughly $0.02 per million tokens in electricity versus $0.50-$15 through cloud APIs, with 7B-13B models on consumer hardware handling most small-business automation. Practical move: trial a local crew for repetitive, privacy-sensitive jobs (email triage, document summarization), but keep frontier cloud models for deep multi-step reasoning.</p>
+<div class="tip">
+<strong>Automation tip of the day: price the task, not the token.</strong> Agent workflows don't make one call - they plan, call tools, re-read context and retry. The median agentic outcome costs about $0.47 (vs ~$0.02 for a single chat), and letting a model "think harder" can double the bill by generating far more output tokens. Three levers: (1) route each step to the cheapest model that clears the bar (Sol or Neon for the bulk, Astra only where needed); (2) use effort settings and caching - on-demand tool schemas and cached input at a fraction of base price; (3) set a per-run spend cap and a kill switch so a retry loop cannot quietly drain the budget. Cheaper tokens can produce more expensive tasks if you skip this.
+</div>
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p></div>
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body></html>
