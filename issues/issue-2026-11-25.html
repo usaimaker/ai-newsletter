@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Automation Daily - November 25, 2026</title>
+<style>body{background:#0b0c16;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.6;margin:0;padding:24px}.wrap{max-width:780px;margin:0 auto}h1{color:#a78bfa;font-size:28px}h2{color:#34d399;font-size:19px;margin-top:30px}a{color:#fbbf24}.tip{margin-top:28px;padding:18px 20px;border-left:4px solid #34d399;background:#121428;border-radius:8px}.sponsor{margin-top:30px;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020}.meta,.footer{font-size:12px;color:#9aa0aa}p{margin:12px 0}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body><div class="wrap">
+<h1>AI Automation Daily - November 25, 2026</h1>
+<p>Today's theme: the bill comes from the loop, not the token. Five fresh developments that cut agent cost by compressing round trips, moving routine work to local models, and putting hard caps around runaway spends. Vendor numbers are flagged as claims, not verified results.</p>
+<h2>1. Cognition ships SWE-2.1 and a 10x faster Lightning variant, free for two weeks</h2>
+<p>On Nov 24 Cognition released <strong>SWE-2.1</strong>, trained with pure reinforcement learning on Moonshot's open-weight Kimi K3 inside a 250k-token context with up to three compactions (about 1M tokens total). Its own scoreboard puts FrontierCode 2.0 at 41.3 and Terminal-Bench 4.1 at 50, up from 24.1 and 24.2 for SWE-2. Paired with Cerebras, <strong>SWE-2.1 Ultrafast</strong> runs at ten times production token speed, and <strong>Lightning</strong> is free through Dec 8, 2026 for Devin Pro, Max and Teams users. No per-token API price has been published yet. Practical move: use the free window to benchmark the fast variant on your own repo before committing, and do not budget around unpublished pricing.</p>
+<h2>2. PrismML fits a 27B coding agent into 5.9 GB, free under Apache 2.0</h2>
+<p>Also on Nov 24, <strong>Ternary Bonsai 2.5 27B</strong> upgraded PrismML's local agent model. Built on Qwen 3.8 27B with ternary weights, it occupies just 5.9 GB of memory and runs on NVIDIA and Intel GPUs through llama.cpp and on Mac, iPhone and iPad through MLX. Vendor benchmarks put agentic coding average at 54.2 (from 37.9) and tool-calling average at 82.2 (from 60.2), with the stated focus on recovering from failed tool calls and cutting pointless repetition. Practical move: a local model means zero per-token cost and no client data leaving the device. A sensible split is local for tests, file conversions and confidential documents, cloud for genuinely complex design work.</p>
+<h2>3. Coding agents finally get daily caps and a bill tied to the pull request</h2>
+<p>Reporting on Nov 19 shows the control layer catching up. <strong>Snowflake</strong> says per-user quotas in its Cortex AI Gateway cut AI costs 16% after an engineer's internal Slack bots spent 1,100 dollars in a single day; the quotas block requests within minutes and daily limits work better than monthly ones. <strong>LangSmith</strong> now links GitHub pull requests and GitLab merge requests to agent threads so teams can compare cost per merged change, in public beta across Claude Code, Codex, Cursor and Copilot. <strong>Qodo</strong> auto-approves low-risk pull requests and withdraws approval if a new commit changes the change. Practical move: set a daily per-user ceiling before the spend happens, and track cost per completed change rather than one opaque monthly token bill.</p>
+<h2>4. Cheap-first routing cuts cost 2.6x, but only if the escalation rate stays low</h2>
+<p>Abacus AI's routing week (Nov 18-19) put model routing firmly in the cost layer: xHigh, a Frontier Model Router, and an open-source Smaug-Uncensored 27B release. Independent evidence is more useful than the vendor scores: the open-source <strong>ACRouter</strong> project reports a 2.6x reduction, 13.21 dollars versus 34.02 on Opus alone. The critical caveat is that routing only saves money when the cheap model succeeds most of the time: log the escalation rate, and if it climbs above roughly 20%, the router is buying retries, not savings. Practical move: reproduce the pattern in any workflow tool - classify the task, try the cheap model first, escalate only on failure or low confidence, cap spend per route, and log every decision. Keep human approval on anything irreversible.</p>
+<h2>5. Self-healing agents find 600 performance root causes in three months</h2>
+<p>OpenAI detailed <strong>Performance Factory</strong> this week: Codex agents automatically discover, diagnose and help fix regressions in ChatGPT performance, tracking more than 1,700 investigations and locating over 600 root causes in three months, around 17 automatic investigations a day without engineers on watch. A sample of 100 suggestions was about 70% accurate, with the rest needing rework, so the system adds an adversarial second session whose job is to try to overturn the first conclusion. Practical move: copy the verification structure, not just the automation. Give a separate check the explicit task of disproving a result before it reaches production, and treat a self-reported success rate as a starting hypothesis.</p>
+<h2>Automation tip of the day: price the task, not the token</h2>
+<div class="tip">A workflow plans, calls tools, re-reads context and retries, so the cost lives in round trips. Four moves that cost nothing to try: (1) use free evaluation windows to benchmark a faster model on your own workload before paying; (2) push routine, repetitive and confidential work to a local model with no per-token fee; (3) try cheap-first routing with a logged escalation rate and a hard budget cap per route; (4) put a daily per-user limit, an adversarial verifier and a kill switch around any loop that can spend or act on its own. Judge every vendor savings figure against your own cost per completed task.</div>
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p></div>
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body></html>
