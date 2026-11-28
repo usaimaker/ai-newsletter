@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Daily - November 28, 2026</title>
+<style>body{background:#0b0c16;color:#e5e7eb;font-family:system-ui,Arial,sans-serif;line-height:1.6;margin:0;padding:24px}.wrap{max-width:780px;margin:0 auto}h1{color:#a78bfa;font-size:28px}h2{color:#34d399;font-size:19px;margin-top:30px}a{color:#fbbf24}.tip{margin-top:28px;padding:18px 20px;border-left:4px solid #34d399;background:#121428;border-radius:8px}.sponsor{margin-top:30px;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020}.meta,.footer{font-size:12px;color:#9aa0aa}p{margin:12px 0}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959815194191047" crossorigin="anonymous"></script>
+</head>
+<body><div class="wrap">
+<h1>AI Automation Daily - November 28, 2026</h1>
+<p>Theme for this issue: the harness is the hidden bill. Five fresh developments that cut automation cost by changing how work is routed, where it runs and who approves it, rather than by waiting for a cheaper model. All savings figures below are claims from vendors or their users, not independently audited results.</p>
+<h2>1. Pax: same model, half the coding bill</h2>
+<p>Pydantic released Pax, a free open-source terminal coding agent, into beta on November 25, 2026, alongside the public beta of its AI Harness SDK. Almost everything in Pax is a plugin, including the coding agent itself, so the model, sandbox and observability can be swapped. On a Pydantic-reported Harness-Bench SWE81 run of 81 tasks with GPT-6.2 Sol held fixed, Pax cost 9.21 dollars against 21.05 dollars for Codex while scoring 64.7 against 60.1. Treat that as a vendor single run: the gain is specific to the OpenAI pairing, against Claude Code the cost was nearly identical at 24.61 versus 25.10 dollars, and another harness, pi, ran cheaper at 6.47 dollars. Practical move: benchmark harness overhead on a fixed set of your own tasks before blaming the model for a high bill.</p>
+<p class="meta">Source: <a href="https://aiaffer.com/2026/11/pax-vs-codex-cost-2026">Pax vs Codex cost analysis</a></p>
+<h2>2. AI:GO 2.0 runs a file-editing agent locally for free</h2>
+<p>On November 27, 2026 Lablup launched AI:GO 2.0, a free desktop app that runs language, vision, image and speech models on the PC with no cloud account or signup. Its Cowork agent starts when you attach a working folder in chat and then reads and edits files only inside that folder; Squad groups role-specific agents for larger jobs. An OS sandbox built on Microsoft Execution Containers restricts code and shell actions to a permitted folder and blocks network access by default, and payments, orders, sending and deletion still require user approval on every path, including automations and external tool connections. Practical move: move document sorting, data cleanup and bulk file restructuring to a local agent when per-token fees or data rules make a cloud agent awkward.</p>
+<p class="meta">Source: <a href="https://www.lablup.com/press/2026-11-lablup-launches-ai-go-v2">Lablup AI:GO 2.0 announcement</a></p>
+<h2>3. A Claude Code skill sends mechanical edits to a free worker</h2>
+<p>A developer published a Claude Code skill called legwork on November 28, 2026. It takes fully specified chores such as cross-file renames, boilerplate and tests written from an existing spec, and hands them to a free model in a jailed worker while Claude keeps planning and review. The author reported the first real run saved 175,341 tokens in 5.8 minutes of worker time. Two caveats from the same post: part of the output still needed correction, and a free tier may retain uploaded code. Practical move: only delegate work with an unambiguous specification and a mechanical check, keep proprietary code out of free tiers, and include the rewrite step in your time budget.</p>
+<p class="meta">Source: <a href="https://www.haiai123.com/en/hot/10790">legwork skill report</a></p>
+<h2>4. One workspace instead of four model subscriptions</h2>
+<p>Collio went live on November 27, 2026 as a browser workspace where you pick GPT, Claude, Gemini or DeepSeek per message instead of paying for each separately. Plain-language requests generate forms with public links, CRM records, slide decks and documents, and you can describe a small tool or web app and have the code written and run. It also creates images and short videos and offers ready-made agents for marketing, sales, finance, engineering and operations. There is a free plan, Pro is 16 euros a month and Business is 49 euros. Practical move: if your team keeps several chat subscriptions open only to compare answers, run a week of real tasks through one multi-model workspace and count the saved subscriptions.</p>
+<p class="meta">Source: <a href="https://launchfree.io/listings/collio.html">Collio launch listing</a></p>
+<h2>5. Hydrogen matches Argon at about one fifth the task cost, for now</h2>
+<p>Google made Gemini 4 Hydrogen generally available on November 12, 2026. Artificial Analysis figures checked on November 25 put Hydrogen at its high setting on the same Intelligence Index score of 51 as Argon at its best, but at 1.87 dollars and 7.9 minutes per task against 9.95 dollars and 24.4 minutes. Argon still leads terminal work, 58.1 percent against 56.1 percent on Terminal-Bench 4.1, and its list price doubles from 2 and 10 dollars per million tokens to 4 and 20 dollars on December 1. Hydrogen stays at 1.50 and 7.50 dollars with a free tier. Practical move: run your own agent tasks on both this week, then move routine subtasks to Hydrogen before the Argon price step, keeping Argon only where your measured terminal-task results justify it.</p>
+<p class="meta">Source: <a href="https://omniakey.com/blog/gemini-4-hydrogen-vs-argon">Hydrogen vs Argon cost comparison</a></p>
+<h2>Automation tip of the day: price the loop, not the model</h2>
+<div class="tip">The harness and the routing decide the bill as much as the model does. (1) Split each workflow into plan, execute and verify, and price each stage separately. (2) Send fully specified mechanical work to a free or local worker, and keep planning and review on the model you trust. (3) Keep sensitive files off free tiers that may retain uploads, and sandbox anything that runs code or touches folders. (4) Put a hard per-run cap and a human approval gate in front of any agent that can publish, purchase, send or call someone. (5) Judge every saving by cost per completed task on your own workload, since vendor benchmark runs are single samples and do not include the correction pass.</div>
+<div class="sponsor">
+<strong style="color:#fff;font-size:18px;">Supported by</strong><br><br>
+<p>Cut your AI bills with hands-off automations and ready-made digital products:</p>
+<ul>
+<li><a href="https://ai-gumroad-products.vercel.app/">AI automation toolkits &amp; prompts on Gumroad</a></li>
+<li><a href="https://ko-fi.com/aidaily">Buy me a coffee on Ko-fi</a></li>
+<li><a href="https://buymeacoffee.com/felovery">Support on Buy Me a Coffee</a></li>
+</ul>
+<p class="meta">AI Nexus Daily is independent. Sponsor links help keep the newsletter free.</p>
+</div>
+<p class="footer">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p></div>
+<div class="nl-promo" style="margin:28px 0;padding:18px 20px;border:1px solid #2a2a40;border-radius:12px;background:#0f1020;color:#e5e7eb;font-family:system-ui,Arial">
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">Sponsor &middot; AI Automation Daily</div>
+  <p style="margin:0 0 10px;line-height:1.6"><strong>Need this built for you?</strong> We design done-for-you AI automation &mdash; WhatsApp outreach, faceless video pipelines, content &amp; SEO engines, custom agents &mdash; that runs 24/7 at $0. <a href="mailto:felovery@gmail.com?subject=AI%20Automation%20project" style="color:#34d399">Email us &rarr;</a></p>
+  <p style="margin:0;font-size:14px"><a href="https://ai-gumroad-products.vercel.app/" target="_blank" rel="noopener" style="color:#fbbf24">&#128722; Free AI Kits</a> &nbsp;&middot;&nbsp; <a href="https://ko-fi.com/aidaily" target="_blank" rel="noopener" style="color:#fff">&#9749; Support on Ko-fi</a> &nbsp;&middot;&nbsp; <a href="https://buymeacoffee.com/felovery" target="_blank" rel="noopener" style="color:#ffd700">&#9749; Buy Me a Coffee</a></p>
+</div>
+<p style="font-size:12px;color:#9aa0aa;margin-top:8px">Some links are affiliate links; they cost you nothing and help keep this newsletter free.</p>
+</body></html>
